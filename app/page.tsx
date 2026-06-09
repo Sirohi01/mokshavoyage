@@ -34,6 +34,7 @@ import { ResourceCard } from "@/components/shared/resource-card";
 import { SectionHeader } from "@/components/shared/section-header";
 import { servicesData, resourcesData } from "@/lib/data";
 import { VideoSection } from "@/components/home/video-section";
+import { InstagramSection } from "@/components/home/instagram-section";
 import { PageTransition } from "@/components/page-transition";
 
 const serviceItems = servicesData.map(s => ({
@@ -97,6 +98,8 @@ export default function Home() {
       <ServicesShowcase services={serviceItems} />
 
       <VideoSection />
+
+      <InstagramSection />
 
       <HearseVanSection />
 

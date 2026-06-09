@@ -95,12 +95,17 @@ const config = {
   			'video-marquee': {
   				from: { transform: 'translateX(0)' },
   				to: { transform: 'translateX(-50%)' }
+  			},
+  			'insta-marquee': {
+  				from: { transform: 'translateX(-50%)' },
+  				to: { transform: 'translateX(0)' }
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'video-marquee': 'video-marquee 28s linear infinite'
+  			'video-marquee': 'video-marquee 28s linear infinite',
+  			'insta-marquee': 'insta-marquee 40s linear infinite'
   		}
   	}
   },
