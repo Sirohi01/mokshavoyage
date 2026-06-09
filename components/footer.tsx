@@ -7,22 +7,40 @@ import { Input } from "@/components/ui/input";
 const footerColumns = [
   {
     title: "Services",
-    links: ["Funeral Services", "Repatriation Services", "Spiritual Services", "Travel & Hospitality", "More Services"]
+    links: [
+      { label: "Funeral Services", href: "/services/funeral-services" },
+      { label: "Repatriation Services", href: "/services/international-repatriation" },
+      { label: "Spiritual Services", href: "/services/spiritual-services" },
+      { label: "Travel & Hospitality", href: "/services/travel-hospitality" },
+      { label: "More Services", href: "/services" }
+    ]
   },
   {
     title: "International Services",
-    links: ["Body Repatriation", "Ashes Repatriation", "Documentation Support", "Air Ambulance", "Embassy Assistance"]
+    links: [
+      { label: "Body Repatriation", href: "/services/body-repatriation" },
+      { label: "Ashes Repatriation", href: "/services/ashes-repatriation" },
+      { label: "Documentation Support", href: "/services/documentation-support" },
+      { label: "Air Ambulance", href: "/services/air-ambulance" },
+      { label: "Embassy Assistance", href: "/services/embassy-assistance" }
+    ]
   },
   {
     title: "Quick Links",
-    links: ["About Us", "Resources", "Blog", "FAQs", "Contact Us"]
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Resources", href: "/resources" },
+      { label: "Blog", href: "/blog" },
+      { label: "FAQs", href: "/faq" },
+      { label: "Contact Us", href: "/contact" }
+    ]
   }
 ];
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[#EDE6DD] bg-white px-4 pt-8 sm:px-6">
-      <div className="mx-auto grid max-w-7xl gap-7 pb-7 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr_1.15fr]">
+    <footer className="border-t border-[#EDE6DD] bg-white px-4 pt-12 sm:px-6">
+      <div className="mx-auto grid max-w-7xl gap-12 pb-12 lg:grid-cols-[1.2fr_0.9fr_0.9fr_0.9fr_1.1fr] lg:gap-8">
         <div>
           <LogoMark />
           <p className="mt-4 max-w-xs text-sm leading-6 text-[#5C6570]">
@@ -38,7 +56,9 @@ export function SiteFooter() {
             <h3 className="mb-4 text-sm font-semibold">{column.title}</h3>
             <ul className="space-y-2 text-sm text-[#5C6570]">
               {column.links.map((link) => (
-                <li key={link}>{link}</li>
+                <li key={link.label}>
+                  <Link href={link.href} className="hover:text-[#C77B21] transition-colors">{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>

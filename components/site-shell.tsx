@@ -18,12 +18,29 @@ import {
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/#services", children: ["Funeral Services", "Memorial Services", "Ambulance Services"] },
-  { label: "International Services", href: "/#countries", children: ["Body Repatriation", "Ashes Repatriation", "Embassy Assistance"] },
-  { label: "Spiritual Care", href: "/#process", children: ["Pandit Services", "Shraddh Services", "Online Rituals"] },
-  { label: "Resources", href: "/#resources", children: ["Guides", "FAQs", "Blog"] },
-  { label: "About Us", href: "/portal" },
-  { label: "Contact Us", href: "/#contact" }
+  { label: "Services", href: "/services", children: [
+    { label: "Funeral Services", href: "/services/funeral-services" },
+    { label: "Memorial Services", href: "/services/memorial-services" },
+    { label: "Ambulance Services", href: "/services/ambulance-services" }
+  ] },
+  { label: "International Services", href: "/services", children: [
+    { label: "Body Repatriation", href: "/services/body-repatriation" },
+    { label: "Ashes Repatriation", href: "/services/ashes-repatriation" },
+    { label: "Embassy Assistance", href: "/services/embassy-assistance" },
+    { label: "Air Ambulance", href: "/services/air-ambulance" }
+  ] },
+  { label: "Spiritual Care", href: "/services", children: [
+    { label: "Pandit Services", href: "/services/pandit-services" },
+    { label: "Shraddh Services", href: "/services/shraddh-services" },
+    { label: "Online Rituals", href: "/services/online-rituals" }
+  ] },
+  { label: "Resources", href: "/resources", children: [
+    { label: "Guides", href: "/resources/international-repatriation-guide" },
+    { label: "FAQs", href: "/faq" },
+    { label: "Blog", href: "/blog" }
+  ] },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" }
 ];
 
 export function SiteHeader() {
@@ -31,9 +48,9 @@ export function SiteHeader() {
     <>
       <a href="#main-content" className="skip-to-content">Skip to content</a>
       <header id="top" className="sticky top-0 z-40 overflow-visible border-b border-[#EDE6DD] bg-white/96 backdrop-blur-xl">
-        <div className="relative mx-auto grid h-[64px] max-w-7xl grid-cols-[170px_1fr_150px] items-center gap-4 px-4 sm:px-6">
-          <div className="relative h-full">
-            <div className="absolute left-0 top-1 z-50">
+        <div className="relative mx-auto flex h-[64px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:grid lg:grid-cols-[170px_1fr_150px] lg:gap-4">
+          <div className="relative h-full w-[110px] shrink-0">
+            <div className="absolute top-2 left-0 z-50 flex h-[110px] w-[110px] items-center justify-center rounded-full bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-[#EDE6DD]">
               <LogoMark />
             </div>
           </div>
@@ -49,7 +66,9 @@ export function SiteHeader() {
                       <Link href={item.href}>Overview</Link>
                     </DropdownMenuItem>
                     {item.children.map((child) => (
-                      <DropdownMenuItem key={child}>{child}</DropdownMenuItem>
+                      <DropdownMenuItem key={child.label} asChild>
+                        <Link href={child.href}>{child.label}</Link>
+                      </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -86,9 +105,20 @@ function MobileMenu() {
         </SheetHeader>
         <div className="mt-5 grid gap-1">
           {navigation.map((item) => (
-            <Link key={item.label} href={item.href} className="rounded-md px-3 py-2.5 text-sm font-semibold text-[#343B45] hover:bg-[#FFF7EF]">
-              {item.label}
-            </Link>
+            <div key={item.label}>
+              <Link href={item.href} className="block rounded-md px-3 py-2.5 text-sm font-semibold text-[#343B45] hover:bg-[#FFF7EF]">
+                {item.label}
+              </Link>
+              {item.children && (
+                <div className="ml-4 border-l border-[#EDE6DD] pl-2">
+                  {item.children.map((child) => (
+                    <Link key={child.label} href={child.href} className="block rounded-md px-3 py-2 text-sm text-[#5C6570] hover:bg-[#FFF7EF] hover:text-[#C77B21]">
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
         <div className="mt-5 grid gap-2">
