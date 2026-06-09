@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
-import { LogoMark } from "@/components/shared/logo";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Mail, MapPin, Phone, Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { LogoMark } from "@/components/shared/logo";
 
 const footerColumns = [
   {
@@ -16,7 +17,7 @@ const footerColumns = [
     ]
   },
   {
-    title: "International Services",
+    title: "International",
     links: [
       { label: "Body Repatriation", href: "/services/body-repatriation" },
       { label: "Ashes Repatriation", href: "/services/ashes-repatriation" },
@@ -39,56 +40,94 @@ const footerColumns = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[#EDE6DD] bg-white px-4 pt-12 sm:px-6">
-      <div className="mx-auto grid max-w-7xl gap-12 pb-12 lg:grid-cols-[1.2fr_0.9fr_0.9fr_0.9fr_1.1fr] lg:gap-8">
-        <div>
-          <LogoMark />
-          <p className="mt-4 max-w-xs text-sm leading-6 text-[#5C6570]">
-            Compassionate care. Global reach. End-to-end support for you and your loved ones.
-          </p>
-          <Link href="#top" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#C77B21]">
-            Back to top <ArrowUp className="h-4 w-4" />
-          </Link>
-        </div>
-
-        {footerColumns.map((column) => (
-          <div key={column.title}>
-            <h3 className="mb-4 text-sm font-semibold">{column.title}</h3>
-            <ul className="space-y-2 text-sm text-[#5C6570]">
-              {column.links.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="hover:text-[#C77B21] transition-colors">{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-
-        <div>
-          <h3 className="mb-4 text-sm font-semibold">Contact Us</h3>
-          <div className="space-y-3 text-sm text-[#5C6570]">
-            <p className="flex gap-2">
-              <Phone className="h-4 w-4 text-[#C77B21]" />
-              <span>24/7 Helpline<br />+91 9568259784</span>
-            </p>
-            <p className="flex gap-2">
-              <Mail className="h-4 w-4 text-[#C77B21]" />
-              <span>info@mokshavoyage.com</span>
-            </p>
-            <p className="flex gap-2">
-              <MapPin className="h-4 w-4 text-[#C77B21]" />
-              <span>New Delhi, India</span>
-            </p>
-          </div>
-          <form className="mt-5 flex gap-2">
-            <Input aria-label="Newsletter email" placeholder="Email updates" className="h-10 bg-[#FCFBF8]" />
-            <Button type="button" className="h-10 bg-[#C77B21] text-white hover:bg-[#B66D1F]">Join</Button>
-          </form>
-        </div>
+    <footer className="relative overflow-hidden border-t border-[#EDE6DD] bg-[#FCFBF8] px-4 pt-6 sm:px-6 md:pt-6 text-[#17202A]">
+      {/* Background Graphic / Texture */}
+      <div className="absolute -bottom-40 -right-40 opacity-[0.03] pointer-events-none">
+        <Image src="/images/moksha/hero2.png" alt="" width={800} height={800} className="grayscale object-cover" />
       </div>
-      <div className="mx-auto flex max-w-7xl flex-col gap-2 border-t border-[#EDE6DD] py-4 text-xs text-[#5C6570] sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2025 Moksha Voyage. All rights reserved.</p>
-        <p>Privacy Policy | Terms & Conditions</p>
+
+      <div className="relative mx-auto max-w-7xl">
+        <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] border-b border-[#EDE6DD] pb-4">
+          
+          {/* Brand & Description */}
+          <div className="pr-0 md:pr-8">
+            <LogoMark />
+            <p className="mt-4 text-[14px] leading-6 text-[#5C6570]">
+              Compassionate care with a global reach. We provide end-to-end support for repatriation and funeral services, ensuring your loved ones are treated with the utmost dignity.
+            </p>
+            <div className="mt-6 flex gap-3">
+              <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#EDE6DD] bg-white text-[#5C6570] transition-all hover:-translate-y-1 hover:bg-[#D1842F] hover:text-white hover:border-[#D1842F] shadow-sm">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#EDE6DD] bg-white text-[#5C6570] transition-all hover:-translate-y-1 hover:bg-[#D1842F] hover:text-white hover:border-[#D1842F] shadow-sm">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#EDE6DD] bg-white text-[#5C6570] transition-all hover:-translate-y-1 hover:bg-[#D1842F] hover:text-white hover:border-[#D1842F] shadow-sm">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#EDE6DD] bg-white text-[#5C6570] transition-all hover:-translate-y-1 hover:bg-[#D1842F] hover:text-white hover:border-[#D1842F] shadow-sm">
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* Links Columns */}
+          {footerColumns.map((column) => (
+            <div key={column.title}>
+              <h3 className="mb-4 font-serif text-lg font-semibold text-[#17202A]">{column.title}</h3>
+              <ul className="space-y-2.5 text-[14px] text-[#5C6570]">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="transition-colors hover:text-[#D1842F]">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Newsletter / Contact */}
+          <div>
+            <h3 className="mb-4 font-serif text-lg font-semibold text-[#17202A]">Emergency Support</h3>
+            <div className="space-y-3 rounded-xl border border-[#EDE6DD] bg-white p-4 shadow-sm">
+              <div className="flex items-start gap-3">
+                <Phone className="mt-1 h-5 w-5 shrink-0 text-[#D1842F]" />
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-[#5C6570]">24/7 Helpline</p>
+                  <p className="mt-1 text-base font-semibold text-[#17202A] tracking-wide">+91 9568259784</p>
+                </div>
+              </div>
+              <div className="h-px bg-[#EDE6DD]" />
+              <div className="flex items-center gap-3 text-sm text-[#5C6570]">
+                <Mail className="h-4 w-4 shrink-0 text-[#D1842F]" />
+                <a href="mailto:info@mokshavoyage.com" className="hover:text-[#D1842F] transition-colors">info@mokshavoyage.com</a>
+              </div>
+            </div>
+
+            <form className="mt-6 flex flex-col gap-2">
+              <p className="text-sm font-medium text-[#17202A]">Stay updated with our news</p>
+              <div className="flex">
+                <Input aria-label="Newsletter email" placeholder="Enter your email" className="h-10 rounded-r-none border-[#EDE6DD] bg-white text-[#17202A] placeholder:text-[#A0AAB5] focus-visible:ring-[#D1842F] focus-visible:ring-offset-0 shadow-sm" />
+                <Button type="button" className="h-10 rounded-l-none bg-[#D1842F] px-4 text-white hover:bg-[#C77B21] shadow-sm">
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <div className="flex flex-col items-center justify-between gap-4 pt-4 pb-4 sm:flex-row">
+          <p className="text-sm text-[#5C6570]">
+            © {new Date().getFullYear()} Moksha Voyage. All rights reserved.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-[#5C6570]">
+            <Link href="#" className="hover:text-[#D1842F] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[#D1842F] transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-[#D1842F] transition-colors">Cookie Policy</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
