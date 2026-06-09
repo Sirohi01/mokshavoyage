@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Play, X } from "lucide-react";
+import { Play, X, Youtube } from "lucide-react";
+import Link from "next/link";
 
 const videos = [
   { id: "W0t229Fs_Bc", title: "Repatriation Service" },
@@ -34,11 +35,22 @@ export function VideoSection() {
     <section className="overflow-hidden bg-white px-0 py-10 border-y border-[#EDE6DD]/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
-        <div className="mb-7 text-center">
-          <p className="eyebrow">Watch Us Work</p>
-          <h2 className="mt-1.5 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
-            Stories of Care & Compassion
-          </h2>
+        <div className="mb-7 flex items-center justify-between">
+          <div>
+            <p className="eyebrow">Watch Us Work</p>
+            <h2 className="mt-1 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+              Stories of Care & Compassion
+            </h2>
+          </div>
+          <Link
+            href="https://www.youtube.com/@MokshaVoyage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto flex shrink-0 items-center gap-2 rounded-full bg-[#FF0000] px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#cc0000] hover:shadow-md"
+          >
+            <Youtube className="h-4 w-4" />
+            Subscribe
+          </Link>
         </div>
       </div>
 

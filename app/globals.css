@@ -157,3 +157,12 @@ textarea:focus-visible {
 .animate-testimonial-marquee {
   animation: testimonial-marquee 34s linear infinite;
 }
+
+@keyframes insta-marquee {
+  from {
+    transform: translateX(-50%) translateZ(0);
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+  }
+}
