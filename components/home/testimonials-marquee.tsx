@@ -27,16 +27,36 @@ export function TestimonialsMarquee() {
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#FAF7F3] to-transparent" />
         <div className="flex w-max animate-testimonial-marquee gap-3 hover:[animation-play-state:paused]">
           {marqueeItems.map(([name, location, text], index) => (
-            <article key={`${name}-${index}`} className="w-[310px] shrink-0 rounded-lg border border-[#EDE6DD] bg-white p-4 shadow-sm">
-              <div className="flex gap-1 text-[#D1842F]">
-                {Array.from({ length: 5 }).map((_, starIndex) => (
-                  <Star key={starIndex} className="h-3.5 w-3.5 fill-current" />
-                ))}
+            <article key={`${name}-${index}`} className="group relative w-[320px] shrink-0 overflow-hidden rounded-xl bg-white p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-[#EDE6DD] hover:border-[#D1842F]/30">
+              {/* Decorative Quote Mark */}
+              <div className="absolute -right-3 -top-3 text-[#FAF7F3] transition-transform duration-500 group-hover:-translate-x-1 group-hover:translate-y-1">
+                <Quote className="h-24 w-24 fill-current opacity-80" />
               </div>
-              <Quote className="mt-3 h-4 w-4 text-[#E7C19A]" />
-              <p className="mt-2 min-h-[78px] text-sm leading-6 text-[#4E5661]">{text}</p>
-              <p className="mt-3 text-sm font-semibold text-[#17202A]">- {name}</p>
-              <p className="text-xs text-[#5C6570]">{location}</p>
+              
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-1 text-[#D1842F]">
+                    {Array.from({ length: 5 }).map((_, starIndex) => (
+                      <Star key={starIndex} className="h-3.5 w-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <Quote className="h-4 w-4 text-[#D1842F]/30" />
+                </div>
+                
+                <p className="mt-3.5 min-h-[72px] text-[14px] leading-relaxed text-[#4E5661]">
+                  "{text}"
+                </p>
+
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#F4EBE1] to-[#FAF7F3] text-[#D1842F] font-serif text-base font-semibold shadow-sm border border-[#E7C19A]/30">
+                    {name.charAt(0)}
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="text-[13px] font-semibold text-[#17202A] leading-tight">{name}</h4>
+                    <p className="text-[11px] text-[#8A94A6] mt-0.5">{location}</p>
+                  </div>
+                </div>
+              </div>
             </article>
           ))}
         </div>
