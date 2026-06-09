@@ -1,0 +1,159 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-sans: "Inter";
+  --font-serif: "Playfair Display";
+  --radius: 0.625rem;
+
+  --background: 36 38% 98%;
+  --foreground: 0 0% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 18%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 18%;
+  --primary: 35 57% 46%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 196 23% 45%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 31 48% 95%;
+  --muted-foreground: 213 12% 40%;
+  --accent: 27 89% 59%;
+  --accent-foreground: 214 20% 15%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 32 31% 88%;
+  --input: 32 31% 88%;
+  --ring: 35 57% 46%;
+
+  --moksha-canvas: #faf9f7;
+  --moksha-cream: #fcfbf8;
+  --moksha-warm: #fff7ef;
+  --moksha-ink: #2d2d2d;
+  --moksha-gold: #c8a96a;
+  --moksha-gold-deep: #c77b21;
+  --moksha-ocean: #567c8d;
+  --moksha-line: #eaeaea;
+}
+
+.dark {
+  --background: 0 0% 10%;
+  --foreground: 36 38% 98%;
+  --card: 0 0% 13%;
+  --card-foreground: 36 38% 98%;
+  --popover: 0 0% 13%;
+  --popover-foreground: 36 38% 98%;
+  --primary: 39 45% 64%;
+  --primary-foreground: 0 0% 12%;
+  --secondary: 196 23% 45%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 32 18% 72%;
+  --accent: 27 89% 59%;
+  --accent-foreground: 0 0% 12%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 24%;
+  --input: 0 0% 24%;
+  --ring: 39 45% 64%;
+}
+
+* {
+  box-sizing: border-box;
+  @apply border-border outline-ring/50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--moksha-canvas);
+  color: var(--moksha-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--moksha-gold-deep);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(199, 123, 33, 0.18);
+}
+
+.skip-to-content {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-150%);
+  border-radius: 999px;
+  background: var(--moksha-ink);
+  color: white;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: transform 160ms ease;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+.section {
+  padding: 32px 0;
+}
+
+.eyebrow {
+  color: var(--moksha-gold-deep);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 22px 0;
+  }
+}
+
+@keyframes testimonial-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-testimonial-marquee {
+  animation: testimonial-marquee 34s linear infinite;
+}
