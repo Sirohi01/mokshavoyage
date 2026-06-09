@@ -22,6 +22,7 @@ import { AnimatedStats } from "@/components/home/animated-stats";
 import { HeroCarousel, type HeroSlide } from "@/components/home/hero-carousel";
 import { HowItWorksCarousel } from "@/components/home/how-it-works-carousel";
 import { ServicesShowcase } from "@/components/home/services-showcase";
+import { HearseVanSection } from "@/components/home/hearse-van-section";
 import { TestimonialsMarquee } from "@/components/home/testimonials-marquee";
 import { PartnerMarquee } from "@/components/home/partner-marquee";
 import { PhilosophySection } from "@/components/home/philosophy-section";
@@ -91,6 +92,8 @@ export default function Home() {
       <PhilosophySection />
 
       <ServicesShowcase services={serviceItems} />
+
+      <HearseVanSection />
 
       <section className="px-4 py-7 sm:px-6">
         <div className="mx-auto max-w-7xl">
