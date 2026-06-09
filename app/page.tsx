@@ -33,6 +33,8 @@ import { CtaBanner } from "@/components/shared/cta-banner";
 import { ResourceCard } from "@/components/shared/resource-card";
 import { SectionHeader } from "@/components/shared/section-header";
 import { servicesData, resourcesData } from "@/lib/data";
+import { VideoSection } from "@/components/home/video-section";
+import { PageTransition } from "@/components/page-transition";
 
 const serviceItems = servicesData.map(s => ({
   title: s.title,
@@ -81,6 +83,7 @@ const heroSlides: HeroSlide[] = [
 export default function Home() {
   return (
     <PublicSiteLayout>
+      <PageTransition>
       <HeroCarousel slides={heroSlides} />
 
       <AnimatedStats />
@@ -92,6 +95,8 @@ export default function Home() {
       <PhilosophySection />
 
       <ServicesShowcase services={serviceItems} />
+
+      <VideoSection />
 
       <HearseVanSection />
 
@@ -143,6 +148,7 @@ export default function Home() {
           </div> */}
         </div>
       </section>
+      </PageTransition>
     </PublicSiteLayout>
   );
 }
