@@ -116,9 +116,25 @@ export function SiteHeader() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start" className="min-w-56">
                     {item.children.map((child) => (
-                      <DropdownMenuItem key={child.label} asChild>
-                        <SmartLink href={child.href}>{child.label}</SmartLink>
-                      </DropdownMenuItem>
+                      child.href.startsWith("/services#") ? (
+                        <DropdownMenuItem
+                          key={child.label}
+                          onSelect={() => {
+                            const hash = child.href.split("#")[1];
+                            if (window.location.pathname === "/services") {
+                              window.location.hash = hash;
+                            } else {
+                              window.location.href = child.href;
+                            }
+                          }}
+                        >
+                          {child.label}
+                        </DropdownMenuItem>
+                      ) : (
+                        <DropdownMenuItem key={child.label} asChild>
+                          <Link href={child.href}>{child.label}</Link>
+                        </DropdownMenuItem>
+                      )
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>

@@ -182,17 +182,17 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div>
                 {/* Category + service badge */}
                 <div className="mb-3 flex items-center gap-2 flex-wrap">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E8DED2] bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#687684] shadow-sm">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E8DED2] bg-white px-3 py-1 text-[11px] font-md uppercase tracking-wider text-[#687684] shadow-sm">
                     {cat.label}
                   </span>
                   <span className="text-[#C8BFB4]">/</span>
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E8D4BD] bg-[#FFF1E2] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#C77B21]">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E8D4BD] bg-[#FFF1E2] px-3 py-1 text-[11px] font-md uppercase tracking-wider text-[#C77B21]">
                     <Icon className="h-3 w-3" />
                     {service.title}
                   </span>
                 </div>
 
-                <h1 className="font-serif text-[2.6rem] font-semibold leading-[1.08] tracking-tight text-[#17202A] sm:text-5xl lg:text-[3.2rem]">
+                <h1 className="font-serif text-[2.6rem] font-md leading-[1.08] tracking-tight text-[#17202A] sm:text-5xl lg:text-[3.2rem]">
                   {service.title}
                 </h1>
 
@@ -215,7 +215,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="grid grid-cols-3 divide-x divide-[#E8DED2] rounded-2xl border border-[#E8DED2] bg-white overflow-hidden shadow-sm">
                 {cat.stats.map(({ num, label }) => (
                   <div key={label} className="flex flex-col items-center py-4 px-2">
-                    <p className="font-serif text-[1.6rem] font-semibold text-[#C77B21] leading-none">{num}</p>
+                    <p className="font-serif text-[1.6rem] font-md text-[#C77B21] leading-none">{num}</p>
                     <p className="mt-1 text-[11px] text-[#687684] text-center">{label}</p>
                   </div>
                 ))}
@@ -223,10 +223,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-3">
-                <Link href="tel:+919568259784" className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-md shadow-[#C77B21]/25 transition hover:bg-[#A96418] no-underline">
+                <Link href="tel:+919568259784" className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-6 py-2.5 text-[13.5px] font-md text-white shadow-md shadow-[#C77B21]/25 transition hover:bg-[#A96418] no-underline">
                   <Phone className="h-4 w-4" /> Call Now
                 </Link>
-                <Link href="https://wa.me/919568259784" className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-white px-6 py-2.5 text-[13.5px] font-semibold text-[#17202A] transition hover:bg-[#FAF8F4] no-underline">
+                <Link href="https://wa.me/919568259784" className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-white px-6 py-2.5 text-[13.5px] font-md text-[#17202A] transition hover:bg-[#FAF8F4] no-underline">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </Link>
               </div>
@@ -239,19 +239,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#17202A]/50 via-black/10 to-transparent" />
                 <div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur px-3 py-1.5 shadow-sm">
                   <BadgeCheck className="h-4 w-4 text-[#1FA463]" />
-                  <span className="text-[12px] font-semibold text-[#17202A]">Verified Service</span>
+                  <span className="text-[12px] font-md text-[#17202A]">Verified Service</span>
                 </div>
-                <div className="absolute bottom-3 left-3 right-3 rounded-xl border border-white/30 bg-white/88 px-4 py-3 backdrop-blur-md">
+                {/* <div className="absolute bottom-3 left-3 right-3 rounded-xl border border-white/30 bg-white/88 px-4 py-3 backdrop-blur-md">
                   <div className="flex items-start gap-2.5">
                     <Icon className="mt-0.5 h-4 w-4 shrink-0 text-[#C77B21]" />
                     <div>
-                      <p className="text-[13px] font-semibold text-[#17202A]">
+                      <p className="text-[13px] font-md text-[#17202A]">
                         Dedicated care coordination for {service.title.toLowerCase()}.
                       </p>
                       <p className="mt-0.5 text-[11.5px] text-[#687684]">Handled with dignity at every step</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -270,8 +270,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* Overview */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C77B21]">Overview</span>
-              <h2 className="mt-1.5 font-serif text-[1.6rem] font-semibold text-[#17202A]">
+              <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Overview</span>
+              <h2 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">
                 {ctx.overviewHeading}
               </h2>
               <p className="mt-2 text-[14px] leading-[1.8] text-[#5C6570]">
@@ -295,8 +295,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* What's included */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C77B21]">Included</span>
-              <h3 className="mt-1.5 font-serif text-[1.6rem] font-semibold text-[#17202A]">What's included</h3>
+              <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Included</span>
+              <h3 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">What's included</h3>
               <p className="mt-1 text-[13.5px] text-[#5C6570]">Every detail is managed — so your family can focus on what truly matters.</p>
               <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                 {service.content.whatIsIncluded.map((item, idx) => (
@@ -310,8 +310,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* Process */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C77B21]">Process</span>
-              <h3 className="mt-1.5 font-serif text-[1.6rem] font-semibold text-[#17202A]">How our care team handles it</h3>
+              <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Process</span>
+              <h3 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">How our care team handles it</h3>
               <p className="mt-1 text-[13.5px] text-[#5C6570]">A clear, compassionate process from the first call to final completion.</p>
               <div className="mt-4 space-y-3">
                 {service.content.process.map((step, idx) => (
@@ -320,7 +320,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                       {step.step}
                     </div>
                     <div>
-                      <h4 className="text-[14px] font-semibold text-[#17202A]">{step.title}</h4>
+                      <h4 className="text-[14px] font-md text-[#17202A]">{step.title}</h4>
                       <p className="mt-1 text-[13px] leading-[1.6] text-[#5C6570]">{step.description}</p>
                     </div>
                   </div>
@@ -330,15 +330,15 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* Why us — category-specific */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C77B21]">Why us</span>
-              <h3 className="mt-1.5 font-serif text-[1.6rem] font-semibold text-[#17202A]">Why families choose Moksha Voyage</h3>
+              <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Why us</span>
+              <h3 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">Why families choose Moksha Voyage</h3>
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
                 {cat.whyCards.map(({ icon: I, title, desc }) => (
                   <div key={title} className="rounded-xl border border-[#E8DED2] bg-[#FAF8F4] p-4">
                     <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#FFF1E2] text-[#C77B21]">
                       <I className="h-4 w-4" />
                     </div>
-                    <p className="text-[13.5px] font-semibold text-[#17202A] mb-1">{title}</p>
+                    <p className="text-[13.5px] font-md text-[#17202A] mb-1">{title}</p>
                     <p className="text-[12.5px] leading-[1.6] text-[#5C6570]">{desc}</p>
                   </div>
                 ))}
@@ -355,7 +355,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF1E2] text-[#C77B21]">
                 <Headphones className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-[1.1rem] font-semibold text-[#17202A]">Need assistance?</h3>
+              <h3 className="font-serif text-[1.1rem] font-md text-[#17202A]">Need assistance?</h3>
               <p className="mt-1.5 text-[13px] leading-[1.6] text-[#5C6570]">
                 Our care team is ready to guide your family with {service.title.toLowerCase()} and related support.
               </p>
@@ -372,7 +372,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* Category commitments */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-[#FFF8EF] p-4 shadow-sm">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C77B21] mb-3">Our commitment</p>
+              <p className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21] mb-3">Our commitment</p>
               {cat.commitments.map(({ icon: I, label }) => (
                 <div key={label} className="flex items-center gap-2.5 py-2 border-b border-[#E8DED2] last:border-0">
                   <I className="h-4 w-4 shrink-0 text-[#C77B21]" />
@@ -383,8 +383,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* Related services from same category */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-4 shadow-sm">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C77B21] mb-1">Related</p>
-              <h3 className="font-serif text-[1rem] font-semibold text-[#17202A] mb-3">{cat.label}</h3>
+              <p className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21] mb-1">Related</p>
+              <h3 className="font-serif text-[1rem] font-md text-[#17202A] mb-3">{cat.label}</h3>
               <div className="grid gap-1.5">
                 {relatedServices.map((s) => (
                   <Link key={s.slug} href={`/services/${s.slug}`} className="group flex items-center justify-between rounded-xl border border-[#E8DED2] bg-[#FAF8F4] px-3 py-2.5 text-[12.5px] font-medium text-[#5C6570] transition hover:bg-white hover:text-[#C77B21]">
@@ -393,7 +393,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </Link>
                 ))}
               </div>
-              <Link href="/services" className="mt-3 inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#C77B21] hover:text-[#9B5F18]">
+              <Link href="/services" className="mt-3 inline-flex items-center gap-1.5 text-[12.5px] font-md text-[#C77B21] hover:text-[#9B5F18]">
                 All services <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>

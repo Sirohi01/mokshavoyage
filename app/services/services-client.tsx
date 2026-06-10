@@ -86,10 +86,10 @@ export function ServicesClient() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-6 lg:grid-cols-[1.1fr_.9fr]">
 
           <div>
-            <span className="inline-flex rounded-full border border-[#E8DED2] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#C77B21]">
+            <span className="inline-flex rounded-full border border-[#E8DED2] bg-white px-4 py-1.5 text-xs font-md uppercase tracking-[0.18em] text-[#C77B21]">
               {activeCat ? activeCat.label : "Our Services"}
             </span>
-            <h1 className="mt-3 max-w-3xl font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-[#17202A] sm:text-5xl md:text-[3.4rem]">
+            <h1 className="mt-3 max-w-3xl font-serif text-4xl font-md leading-[1.05] tracking-tight text-[#17202A] sm:text-5xl md:text-[3.4rem]">
               {activeCat
                 ? activeCat.desc
                 : "Comprehensive care for families, across every step."}
@@ -104,7 +104,7 @@ export function ServicesClient() {
             <div className="mt-5 flex flex-wrap gap-2">
               <button
                 onClick={() => { window.location.hash = ""; setActiveKey(null); }}
-                className="inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-[12.5px] font-semibold transition"
+                className="inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-[12.5px] font-md transition"
                 style={{
                   borderColor: !activeKey ? "#C77B21" : "#E8DED2",
                   backgroundColor: !activeKey ? "#FFF1E2" : "#fff",
@@ -120,7 +120,7 @@ export function ServicesClient() {
                   <button
                     key={cat.key}
                     onClick={() => { window.location.hash = cat.key; setActiveKey(cat.key); }}
-                    className="inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-[12.5px] font-semibold transition"
+                    className="inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-[12.5px] font-md transition"
                     style={{
                       borderColor: isActive ? cat.border : "#E8DED2",
                       backgroundColor: isActive ? cat.bg : "#fff",
@@ -160,7 +160,7 @@ export function ServicesClient() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#17202A]/40 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 rounded-xl border border-white/40 bg-white/90 px-4 py-3 backdrop-blur-md">
-                <p className="text-[13px] font-semibold text-[#17202A]">
+                <p className="text-[13px] font-md text-[#17202A]">
                   One trusted care team for rituals, logistics, documentation and global family assistance.
                 </p>
               </div>
@@ -173,10 +173,10 @@ export function ServicesClient() {
       {/* ── CATEGORY SECTIONS ── */}
       {visibleCategories.map((cat) => {
         const CatIcon = cat.icon;
-        const services = servicesData.filter((s) => cat.slugs.includes(s.slug));
+        const services = servicesData.filter((s) => (cat.slugs as readonly string[]).includes(s.slug));
 
         return (
-          <section key={cat.key} className="px-4 py-6 sm:px-6 border-t border-[#E8DED2]">
+          <section key={cat.key} className="px-4 py-4 sm:px-6 border-t border-[#E8DED2]">
             <div className="mx-auto max-w-7xl">
 
               {/* Section header */}
@@ -187,12 +187,12 @@ export function ServicesClient() {
                     <CatIcon className="h-5 w-5" style={{ color: cat.color }} />
                   </div>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em]" style={{ color: cat.color }}>{cat.eyebrow}</p>
-                    <h2 className="font-serif text-[1.6rem] font-semibold text-[#17202A] leading-tight">{cat.label}</h2>
+                    <p className="text-[11px] font-md uppercase tracking-[0.2em]" style={{ color: cat.color }}>{cat.eyebrow}</p>
+                    <h2 className="font-serif text-[1.6rem] font-md text-[#17202A] leading-tight">{cat.label}</h2>
                     <p className="mt-0.5 max-w-lg text-[13.5px] text-[#5C6570]">{cat.desc}</p>
                   </div>
                 </div>
-                <span className="hidden w-fit shrink-0 rounded-full border px-3 py-1 text-[12px] font-semibold sm:inline-block"
+                <span className="hidden w-fit shrink-0 rounded-full border px-3 py-1 text-[12px] font-md sm:inline-block"
                   style={{ borderColor: cat.border, backgroundColor: cat.bg, color: cat.color }}>
                   {services.length} services
                 </span>
@@ -216,7 +216,7 @@ export function ServicesClient() {
                             className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#17202A]/40 via-transparent to-transparent" />
-                          <span className="absolute right-3 top-3 rounded-full border px-2.5 py-1 text-[10.5px] font-semibold backdrop-blur-sm"
+                          <span className="absolute right-3 top-3 rounded-full border px-2.5 py-1 text-[10.5px] font-md backdrop-blur-sm"
                             style={{ borderColor: cat.border + "88", backgroundColor: cat.bg + "cc", color: cat.color }}>
                             {cat.label}
                           </span>
@@ -227,7 +227,7 @@ export function ServicesClient() {
                       </div>
                       <div className="px-4 pb-3.5 pt-2">
                         <div className="mb-1.5 flex items-start justify-between gap-3">
-                          <h3 className="font-serif text-[18px] font-semibold leading-snug text-[#17202A] transition-colors group-hover:text-[#C77B21]">
+                          <h3 className="font-serif text-[18px] font-md leading-snug text-[#17202A] transition-colors group-hover:text-[#C77B21]">
                             {service.title}
                           </h3>
                           <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-[#C77B21] transition-transform group-hover:translate-x-1" />
@@ -251,24 +251,24 @@ export function ServicesClient() {
       })}
 
       {/* ── BOTTOM CTA ── */}
-      <section className="px-4 py-6 sm:px-6">
-        <div className="mx-auto max-w-7xl rounded-[26px] border border-[#E8DED2] bg-[#FFF8EF] p-6 shadow-sm">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <section className="px-4 py-4 sm:px-6">
+        <div className="mx-auto max-w-7xl rounded-[20px] border border-[#E8DED2] bg-[#FFF8EF] px-5 py-4 shadow-sm">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#C77B21]">Need help choosing?</p>
-              <h2 className="mt-1 font-serif text-[1.5rem] font-semibold text-[#17202A] sm:text-[1.8rem]">
+              <p className="text-[10.5px] font-semibold uppercase tracking-[0.22em] text-[#C77B21]">Need help choosing?</p>
+              <h2 className="mt-0.5 font-serif text-[1.2rem] font-semibold text-[#17202A] sm:text-[1.4rem]">
                 Not sure which service you need?
               </h2>
-              <p className="mt-1 text-[13.5px] text-[#5C6570] max-w-md">
+              <p className="mt-0.5 text-[12.5px] text-[#5C6570] max-w-md">
                 Our care team is available 24/7 to guide you to the right service and start coordination immediately.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2.5">
-              <Link href="tel:+919568259784" className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-5 py-2.5 text-[13px] font-semibold text-white no-underline transition hover:bg-[#A96418]">
-                <Headphones className="h-4 w-4" /> Talk to Us
+            <div className="flex flex-wrap gap-2 shrink-0">
+              <Link href="tel:+919568259784" className="inline-flex items-center gap-1.5 rounded-full bg-[#C77B21] px-4 py-2 text-[12.5px] font-semibold text-white no-underline transition hover:bg-[#A96418]">
+                <Headphones className="h-3.5 w-3.5" /> Talk to Us
               </Link>
-              <Link href="/contact" className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-white px-5 py-2.5 text-[13px] font-semibold text-[#17202A] no-underline transition hover:bg-[#FAF8F4]">
-                Send a Message <ArrowRight className="h-4 w-4" />
+              <Link href="/contact" className="inline-flex items-center gap-1.5 rounded-full border border-[#CBBBA9] bg-white px-4 py-2 text-[12.5px] font-semibold text-[#17202A] no-underline transition hover:bg-[#FAF8F4]">
+                Send a Message <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </div>

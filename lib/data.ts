@@ -38,7 +38,7 @@ export const servicesData: ServiceData[] = [
     title: "Funeral Services",
     shortDescription: "Complete funeral arrangements handled with dignity and respect.",
     icon: HandHeart,
-    heroImage: "/images/moksha/hero2.png",
+    heroImage: "/images/moksha/funeral.png",
     content: {
       overview: "We understand that losing a loved one is incredibly difficult. Our comprehensive funeral services are designed to lift the burden of planning off your shoulders. From securing the venue to arranging transport, we handle every detail with the utmost respect and care.",
       whatIsIncluded: [
@@ -62,7 +62,7 @@ export const servicesData: ServiceData[] = [
     title: "International Repatriation",
     shortDescription: "Dignified body and ashes repatriation worldwide.",
     icon: Plane,
-    heroImage: "/images/moksha/travel-assistance.png",
+    heroImage: "/images/moksha/international.png",
     content: {
       overview: "Bringing a loved one home from another country involves complex logistics and paperwork. We specialize in international repatriation, coordinating with embassies, airlines, and local authorities to ensure a smooth, dignified journey home.",
       whatIsIncluded: [
@@ -86,7 +86,7 @@ export const servicesData: ServiceData[] = [
     title: "Spiritual Services",
     shortDescription: "Pandit services, rituals, and ceremonies.",
     icon: Sparkles,
-    heroImage: "/images/moksha/spiritual-diya.png",
+    heroImage: "/images/moksha/spritual.png",
     content: {
       overview: "To honor the departed soul according to traditional customs, we offer comprehensive spiritual services. Whether it's finding the right Pandit or gathering specific samagri (ritual items), we ensure all religious obligations are met respectfully.",
       whatIsIncluded: [
@@ -110,7 +110,7 @@ export const servicesData: ServiceData[] = [
     title: "Travel & Hospitality",
     shortDescription: "Flights, hotels, and family travel support.",
     icon: Hotel,
-    heroImage: "/images/moksha/hero3.png",
+    heroImage: "/images/moksha/travel.png",
     content: {
       overview: "When family members need to travel urgently to attend a funeral, managing bookings is stressful. Our travel and hospitality desk assists with emergency flight bookings, local accommodation, and ground transport for relatives.",
       whatIsIncluded: [
@@ -158,7 +158,7 @@ export const servicesData: ServiceData[] = [
     title: "Memorial Services",
     shortDescription: "Digital memorials and tribute pages.",
     icon: BookOpen,
-    heroImage: "/images/moksha/hero-lotus-sunrise.png",
+    heroImage: "/images/moksha/memorial.png",
     content: {
       overview: "Preserve the memory of your loved one with our beautifully crafted digital memorial services. We create tribute pages where family and friends from around the world can share memories, photos, and condolences.",
       whatIsIncluded: [
@@ -182,7 +182,7 @@ export const servicesData: ServiceData[] = [
     title: "Ambulance Services",
     shortDescription: "Local and long-distance transport.",
     icon: Ambulance,
-    heroImage: "/images/moksha/hero1.png",
+    heroImage: "/images/moksha/amb.png",
     content: {
       overview: "We offer prompt and respectful ambulance and hearse van services for the transportation of the deceased. Whether it's a short local transfer or a long-distance inter-city journey, our vehicles are equipped for dignified transport.",
       whatIsIncluded: [
@@ -206,7 +206,7 @@ export const servicesData: ServiceData[] = [
     title: "Body Repatriation",
     shortDescription: "Safe and compliant transport across borders.",
     icon: Globe2,
-    heroImage: "/images/moksha/travel-assistance.png",
+    heroImage: "/images/moksha/bodyTrans.png",
     content: {
       overview: "When a loved one passes away abroad, bringing them home is our priority. We manage the entire body repatriation process, adhering strictly to international health and aviation regulations.",
       whatIsIncluded: [
@@ -230,7 +230,7 @@ export const servicesData: ServiceData[] = [
     title: "Ashes Repatriation",
     shortDescription: "Respectful transport of cremated remains.",
     icon: ShieldCheck,
-    heroImage: "/images/moksha/hero-lotus-sunrise.png",
+    heroImage: "/images/moksha/ashes.png",
     content: {
       overview: "Transporting cremated remains across international borders requires specific documentation and specialized packing. We offer secure and respectful ashes repatriation services.",
       whatIsIncluded: [
@@ -254,7 +254,7 @@ export const servicesData: ServiceData[] = [
     title: "Embassy Assistance",
     shortDescription: "Expert liaison for international clearances.",
     icon: UsersRound,
-    heroImage: "/images/moksha/documentation-guide.png",
+    heroImage: "/images/moksha/embacy.png",
     content: {
       overview: "Dealing with foreign embassies can be time-consuming and confusing. Our team has extensive experience liaising with consulates globally to expedite No Objection Certificates (NOC) and other vital clearances.",
       whatIsIncluded: [
@@ -278,7 +278,7 @@ export const servicesData: ServiceData[] = [
     title: "Pandit Services",
     shortDescription: "Experienced priests for all ceremonies.",
     icon: Sparkles,
-    heroImage: "/images/moksha/spiritual-diya.png",
+    heroImage: "/images/moksha/pandit.png",
     content: {
       overview: "Finding the right priest during a time of loss can be difficult. We provide experienced Pandits from various communities who are well-versed in specific regional and religious funeral rites (Antyesti).",
       whatIsIncluded: [
@@ -302,7 +302,7 @@ export const servicesData: ServiceData[] = [
     title: "Shraddh Services",
     shortDescription: "Complete arrangements for ancestral rituals.",
     icon: Sparkles,
-    heroImage: "/images/moksha/spiritual-diya.png",
+    heroImage: "/images/moksha/Shraddh.png",
     content: {
       overview: "Shraddh is a vital ritual to pay homage to ancestors. We assist in organizing the entire ceremony, ensuring it is performed according to Vedic traditions, bringing peace to the departed souls.",
       whatIsIncluded: [
@@ -326,7 +326,7 @@ export const servicesData: ServiceData[] = [
     title: "Online Rituals",
     shortDescription: "Remote participation in final rites.",
     icon: PlaySquare,
-    heroImage: "/images/moksha/hero-lotus-sunrise.png",
+    heroImage: "/images/moksha/online.png",
     content: {
       overview: "For family members living abroad or unable to travel, we offer high-quality online ritual services. Participate in the final rites, prayers, or Shraddh virtually, guided by a Pandit over a video call.",
       whatIsIncluded: [
@@ -350,7 +350,7 @@ export const servicesData: ServiceData[] = [
     title: "Air Ambulance",
     shortDescription: "Urgent medical and mortal remains transport via air.",
     icon: Ambulance,
-    heroImage: "/images/moksha/travel-assistance.png",
+    heroImage: "/images/moksha/airTransport.png",
     content: {
       overview: "When time is of the essence, or when commercial flights are not viable, our chartered air ambulance services provide rapid, point-to-point transportation of the deceased, accompanied by necessary professionals.",
       whatIsIncluded: [
@@ -374,7 +374,7 @@ export const servicesData: ServiceData[] = [
     title: "Live Streaming",
     shortDescription: "Live telecast of rituals and ceremonies.",
     icon: PlaySquare,
-    heroImage: "/images/moksha/hero-lotus-sunrise.png",
+    heroImage: "/images/moksha/online.png",
     content: {
       overview: "When distance prevents family and friends from attending in person, our professional live streaming service ensures everyone can participate in the final farewell.",
       whatIsIncluded: [
