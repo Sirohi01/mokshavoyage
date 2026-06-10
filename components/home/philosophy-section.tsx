@@ -46,7 +46,7 @@ export function PhilosophySection() {
             <div className="mt-8 flex items-center gap-4">
               <div className="h-12 w-12 overflow-hidden rounded-full border border-[#EDE6DD] bg-[#FCFBF8]">
                 {/* Placeholder for founder avatar */}
-                <Image src="/images/moksha/1.png" alt="Founder" width={48} height={48} className="object-cover grayscale" />
+                <Image src="/images/moksha/vijaySharma.png" alt="Founder" width={48} height={48} className="object-cover" />
               </div>
               <div>
                 <p className="font-md text-[#17202A]">Vijay Sharma</p>
