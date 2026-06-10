@@ -162,10 +162,10 @@ export const countries = [
 ];
 
 export const testimonials = [
-  { name: "Rajesh Kumar", location: "London, UK", text: "Moksha Voyage was a blessing for our family in the toughest time. They handled everything with so much care and respect.", rating: 5 },
-  { name: "Priya Sharma", location: "Dubai, UAE", text: "The team helped us repatriate my father's mortal remains from Dubai to India seamlessly. Highly recommended.", rating: 5 },
+  { name: "Nitin Kumar", location: "London, UK", text: "Moksha Voyage was a blessing for our family in the toughest time. They handled everything with so much care and respect.", rating: 5 },
+  { name: "Sadhana Chaudhary", location: "Dubai, UAE", text: "The team helped us repatriate my father's mortal remains from Dubai to India seamlessly. Highly recommended.", rating: 5 },
   { name: "Anita Desai", location: "Toronto, Canada", text: "Their spiritual services gave us peace and comfort. Everything was arranged beautifully and on time.", rating: 5 },
-  { name: "Arvind Patel", location: "Melbourne, Australia", text: "Professional, compassionate and always available. Thank you for being there for us.", rating: 5 }
+  { name: "Vansh Chaudhary", location: "Melbourne, Australia", text: "Professional, compassionate and always available. Thank you for being there for us.", rating: 5 }
 ];
 
 export const faqs = [

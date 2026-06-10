@@ -1,14 +1,14 @@
 import { Quote, Star } from "lucide-react";
 
 const testimonials = [
-  ["Rajesh Kumar", "London, UK", "Moksha Voyage was a blessing for our family. They handled everything with care and respect.", "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"],
-  ["Priya Sharma", "Dubai, UAE", "The team helped us repatriate my father's mortal remains from Dubai to India seamlessly.", "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"],
+  ["Nitin Kumar", "London, UK", "Moksha Voyage was a blessing for our family. They handled everything with care and respect.", "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"],
+  ["Sadhana Chaudhary", "Dubai, UAE", "The team helped us repatriate my father's mortal remains from Dubai to India seamlessly.", "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"],
   ["Anita Desai", "Toronto, Canada", "Their spiritual services gave us peace and comfort. Everything was arranged beautifully.", "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=150&q=80"],
-  ["Arvind Patel", "Melbourne, Australia", "Professional, compassionate and always available. Thank you for being there for us.", "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"],
-  ["Meera Iyer", "Mumbai, India", "The coordinator kept our family informed at every step and made the process less overwhelming.", "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"],
-  ["Karan Mehta", "New York, USA", "Documentation, airport coordination and travel help were all managed with complete clarity.", "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"],
-  ["Nisha Shah", "Ahmedabad, India", "The prayer meeting and rituals were arranged with dignity and attention to every detail.", "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=150&q=80"],
-  ["Vikram Rao", "Singapore", "We were abroad and still felt fully supported through updates, calls and clear timelines.", "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"]
+  ["Vansh Chaudhary", "Melbourne, Australia", "Professional, compassionate and always available. Thank you for being there for us.", "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"],
+  ["Aman Chaudhary", "Mumbai, India", "The coordinator kept our family informed at every step and made the process less overwhelming.", "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"],
+  ["Rohit Kumar", "New York, USA", "Documentation, airport coordination and travel help were all managed with complete clarity.", "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"],
+  ["Anna Sai", "Ahmedabad, India", "The prayer meeting and rituals were arranged with dignity and attention to every detail.", "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=150&q=80"],
+  ["Manish Sirohi", "Singapore", "We were abroad and still felt fully supported through updates, calls and clear timelines.", "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"]
 ];
 
 export function TestimonialsMarquee() {
