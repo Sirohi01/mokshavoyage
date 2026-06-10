@@ -113,12 +113,12 @@ export default function AboutPage() {
 
           <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-10">
             <div className="max-w-2xl">
-              <span className="mb-1 mt-5 inline-flex items-center gap-2 rounded-full border border-[#E8D4BD] bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#C27A24] shadow-sm backdrop-blur">
+              <span className="mb-1 mt-5 inline-flex items-center gap-2 rounded-full border border-[#E8D4BD] bg-white/80 px-3 py-1 text-[11px] font-md uppercase tracking-[0.22em] text-[#C27A24] shadow-sm backdrop-blur">
                 <Globe2 className="h-3.5 w-3.5" />
                 About Moksha Voyage
               </span>
 
-              <h1 className="font-serif text-[42px] font-semibold leading-[1.02] tracking-[-0.03em] text-[#121A24] sm:text-[56px] lg:text-[68px]">
+              <h1 className="font-serif text-[42px] font-md leading-[1.02] tracking-[-0.03em] text-[#121A24] sm:text-[56px] lg:text-[68px]">
                 Compassion across borders.
               </h1>
 
@@ -130,7 +130,7 @@ export default function AboutPage() {
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-5 py-3 text-[13px] font-semibold text-white shadow-lg shadow-[#C77B21]/20 transition hover:-translate-y-0.5 hover:bg-[#A96418] no-underline"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-5 py-3 text-[13px] font-md text-white shadow-lg shadow-[#C77B21]/20 transition hover:-translate-y-0.5 hover:bg-[#A96418] no-underline"
                 >
                   <Phone className="h-4 w-4" />
                   Get Immediate Help
@@ -138,7 +138,7 @@ export default function AboutPage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-white/75 px-5 py-3 text-[13px] font-semibold text-[#17202A] transition hover:-translate-y-0.5 hover:bg-white no-underline"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-white/75 px-5 py-3 text-[13px] font-md text-[#17202A] transition hover:-translate-y-0.5 hover:bg-white no-underline"
                 >
                   Explore Services
                   <ArrowRight className="h-4 w-4" />
@@ -150,7 +150,7 @@ export default function AboutPage() {
               {stats.map(({ icon: Icon, num, label }) => (
                 <div key={label} className="rounded-2xl bg-white/70 p-3.5">
                   <Icon className="mb-2 h-5 w-5 text-[#C77B21]" />
-                  <p className="font-serif text-[28px] font-semibold leading-none text-[#17202A]">
+                  <p className="font-serif text-[28px] font-md leading-none text-[#17202A]">
                     {num}
                   </p>
                   <p className="mt-1 text-[12px] text-[#617080]">{label}</p>
@@ -173,11 +173,11 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-col justify-center rounded-[30px] border border-[#E8DED2] bg-[#FAF8F4] p-5 sm:p-6">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C77B21]">
+              <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                 Our Philosophy
               </p>
 
-              <h2 className="font-serif text-[32px] font-semibold leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[42px]">
+              <h2 className="font-serif text-[32px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[42px]">
                 More than logistics. A hand to hold.
               </h2>
 
@@ -200,7 +200,7 @@ export default function AboutPage() {
                   dignity and respect as we would our own family.”
                 </p>
                 <div className="mt-4">
-                  <p className="text-[13px] font-semibold text-[#17202A]">
+                  <p className="text-[13px] font-md text-[#17202A]">
                     Vijay Sharma
                   </p>
                   <p className="text-[12px] text-[#687684]">Founder</p>
@@ -214,10 +214,10 @@ export default function AboutPage() {
         <section className="border-b border-[#E8DED2] px-4 py-5 sm:px-6">
           <div className="mx-auto max-w-7xl">
             <div className="mb-4 max-w-2xl">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C77B21]">
+              <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                 What guides us
               </p>
-              <h2 className="font-serif text-[32px] font-semibold leading-tight tracking-[-0.02em] sm:text-[42px]">
+              <h2 className="font-serif text-[32px] font-md leading-tight tracking-[-0.02em] sm:text-[42px]">
                 Built on care, trust and dignity.
               </h2>
             </div>
@@ -231,7 +231,7 @@ export default function AboutPage() {
                   <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-[#E8D4BD] bg-[#FFF1E2] text-[#C77B21] transition group-hover:scale-105">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-[15px] font-semibold text-[#17202A]">
+                  <h3 className="text-[15px] font-md text-[#17202A]">
                     {title}
                   </h3>
                   <p className="mt-1.5 text-[13px] leading-[1.6] text-[#5C6570]">
@@ -248,10 +248,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C77B21]">
+                <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   How it works
                 </p>
-                <h2 className="font-serif text-[32px] font-semibold leading-tight tracking-[-0.02em] sm:text-[42px]">
+                <h2 className="font-serif text-[32px] font-md leading-tight tracking-[-0.02em] sm:text-[42px]">
                   Simple steps. Complete support.
                 </h2>
               </div>
@@ -279,7 +279,7 @@ export default function AboutPage() {
                         className="object-cover brightness-[0.98] saturate-[0.95] transition duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                      <div className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-[#C77B21] shadow-sm backdrop-blur">
+                      <div className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-md text-[#C77B21] shadow-sm backdrop-blur">
                         {num}
                       </div>
                     </div>
@@ -287,7 +287,7 @@ export default function AboutPage() {
                     <div className="p-4">
                       <div className="mb-2 flex items-center gap-2">
                         <Icon className="h-4 w-4 text-[#C77B21]" />
-                        <h3 className="text-[15px] font-semibold text-[#17202A]">
+                        <h3 className="text-[15px] font-md text-[#17202A]">
                           {title}
                         </h3>
                       </div>
@@ -307,10 +307,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C77B21]">
+                <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   Global presence
                 </p>
-                <h2 className="font-serif text-[30px] font-semibold leading-tight tracking-[-0.02em] sm:text-[40px]">
+                <h2 className="font-serif text-[30px] font-md leading-tight tracking-[-0.02em] sm:text-[40px]">
                   Supporting families across borders.
                 </h2>
               </div>
@@ -327,7 +327,7 @@ export default function AboutPage() {
                   className="rounded-2xl border border-[#E8DED2] bg-white px-4 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C77B21]/40 hover:bg-[#FFF9F2] hover:shadow-md"
                 >
                   <Globe2 className="mb-3 h-5 w-5 text-[#C77B21]" />
-                  <p className="text-[13px] font-semibold text-[#17202A]">
+                  <p className="text-[13px] font-md text-[#17202A]">
                     {region}
                   </p>
                   <p className="mt-1 text-[11.5px] text-[#687684]">
@@ -351,7 +351,7 @@ export default function AboutPage() {
                   <Icon className="h-5 w-5 text-[#C77B21]" />
                 </div>
                 <div>
-                  <p className="text-[13px] font-semibold text-[#17202A]">
+                  <p className="text-[13px] font-md text-[#17202A]">
                     {label}
                   </p>
                   <p className="text-[12px] text-[#687684]">{sub}</p>
@@ -366,11 +366,11 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl overflow-hidden rounded-[30px] border border-[#E8DED2] bg-white shadow-sm">
             <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
               <div className="p-5 sm:p-6 lg:p-7">
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C77B21]">
+                <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   We are here for you
                 </p>
 
-                <h2 className="font-serif text-[34px] font-semibold leading-tight tracking-[-0.02em] sm:text-[46px]">
+                <h2 className="font-serif text-[34px] font-md leading-tight tracking-[-0.02em] sm:text-[46px]">
                   Support when your family needs it most.
                 </h2>
 
@@ -395,7 +395,7 @@ export default function AboutPage() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-5 py-3 text-[13px] font-semibold text-white shadow-lg shadow-[#C77B21]/20 transition hover:-translate-y-0.5 hover:bg-[#A96418] no-underline"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#C77B21] px-5 py-3 text-[13px] font-md text-white shadow-lg shadow-[#C77B21]/20 transition hover:-translate-y-0.5 hover:bg-[#A96418] no-underline"
                   >
                     <Phone className="h-4 w-4" />
                     Request Help
@@ -403,7 +403,7 @@ export default function AboutPage() {
 
                   <Link
                     href="/services"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-[#FAF8F4] px-5 py-3 text-[13px] font-semibold text-[#17202A] transition hover:-translate-y-0.5 hover:bg-white no-underline"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#CBBBA9] bg-[#FAF8F4] px-5 py-3 text-[13px] font-md text-[#17202A] transition hover:-translate-y-0.5 hover:bg-white no-underline"
                   >
                     View Services
                     <ArrowRight className="h-4 w-4" />
