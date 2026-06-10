@@ -130,7 +130,7 @@ export default function Home() {
 
         <HomeFaq />
 
-        <section id="resources" className="px-4 pt-1 pb-7 sm:px-6 md:pt-2">
+        <section id="resources" className="px-4 pt-1 pb-7 sm:px-6 md:pt-1">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
               eyebrow="Resources & guides"
@@ -141,7 +141,7 @@ export default function Home() {
                 </Link>
               }
             />
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-2">
               {resourcesData.map((resource) => (
                 <ResourceCard key={resource.title} tag={resource.tag} title={resource.title} image={resource.image} href={`/resources/${resource.slug}`} />
               ))}
