@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { ChevronDown, Menu, MessageCircle, Phone } from "lucide-react";
 import { LogoMark } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
@@ -6,42 +9,90 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetTrigger
+  SheetTrigger,
 } from "@/components/ui/sheet";
 
 const navigation = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services", children: [
-    { label: "Funeral Services", href: "/services/funeral-services" },
-    { label: "Memorial Services", href: "/services/memorial-services" },
-    { label: "Ambulance Services", href: "/services/ambulance-services" }
-  ] },
-  { label: "International Services", href: "/services", children: [
-    { label: "Body Repatriation", href: "/services/body-repatriation" },
-    { label: "Ashes Repatriation", href: "/services/ashes-repatriation" },
-    { label: "Embassy Assistance", href: "/services/embassy-assistance" },
-    { label: "Air Ambulance", href: "/services/air-ambulance" }
-  ] },
-  { label: "Spiritual Care", href: "/services", children: [
-    { label: "Pandit Services", href: "/services/pandit-services" },
-    { label: "Shraddh Services", href: "/services/shraddh-services" },
-    { label: "Online Rituals", href: "/services/online-rituals" }
-  ] },
-  { label: "Resources", href: "/resources", children: [
-    { label: "Guides", href: "/resources/international-repatriation-guide" },
-    { label: "FAQs", href: "/faq" },
-    { label: "Blog", href: "/blog" }
-  ] },
-  { label: "Contact Us", href: "/contact" }
+  {
+    label: "Services", href: "/services#services", children: [
+      { label: "All Services",       href: "/services#services"  },
+      { label: "Funeral Services",   href: "/services/funeral-services"   },
+      { label: "Memorial Services",  href: "/services/memorial-services"  },
+      { label: "Ambulance Services", href: "/services/ambulance-services" },
+    ],
+  },
+  {
+    label: "International Services", href: "/services#international", children: [
+      { label: "All International",  href: "/services#international"       },
+      { label: "Body Repatriation",  href: "/services/body-repatriation"   },
+      { label: "Ashes Repatriation", href: "/services/ashes-repatriation"  },
+      { label: "Embassy Assistance", href: "/services/embassy-assistance"  },
+      { label: "Air Ambulance",      href: "/services/air-ambulance"       },
+    ],
+  },
+  {
+    label: "Spiritual Care", href: "/services#spiritual", children: [
+      { label: "All Spiritual",    href: "/services#spiritual"       },
+      { label: "Pandit Services",  href: "/services/pandit-services" },
+      { label: "Shraddh Services", href: "/services/shraddh-services"},
+      { label: "Online Rituals",   href: "/services/online-rituals"  },
+    ],
+  },
+  {
+    label: "Resources", href: "/resources", children: [
+      { label: "Guides", href: "/resources/international-repatriation-guide" },
+      { label: "FAQs",   href: "/faq"       },
+      { label: "Blog",   href: "/blog"      },
+    ],
+  },
+  { label: "Contact Us", href: "/contact" },
 ];
+
+/** Smart nav link — if we're already on /services and the target is /services#hash,
+ *  just set window.location.hash without a full navigation. */
+function SmartLink({
+  href,
+  children,
+  className,
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const isServicesHash = href.startsWith("/services#");
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (isServicesHash) {
+      e.preventDefault();
+      const hash = href.split("#")[1];
+      if (pathname === "/services") {
+        // Already on /services — just swap the hash, no reload
+        window.location.hash = hash;
+      } else {
+        // Navigate to /services then set hash
+        router.push(href);
+      }
+    }
+  };
+
+  return (
+    <Link href={href} className={className} onClick={isServicesHash ? handleClick : undefined}>
+      {children}
+    </Link>
+  );
+}
 
 export function SiteHeader() {
   return (
@@ -49,11 +100,13 @@ export function SiteHeader() {
       <a href="#main-content" className="skip-to-content">Skip to content</a>
       <header id="top" className="sticky top-0 z-40 overflow-visible border-b border-[#EDE6DD] bg-white/96 backdrop-blur-xl">
         <div className="relative mx-auto flex h-[64px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:grid lg:grid-cols-[170px_1fr_150px] lg:gap-4">
+
           <div className="relative h-full w-[110px] shrink-0">
             <div className="absolute top-2 left-0 z-50 flex h-[110px] w-[110px] items-center justify-center rounded-full bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-[#EDE6DD]">
               <LogoMark />
             </div>
           </div>
+
           <nav className="hidden items-center justify-center gap-5 whitespace-nowrap text-[15px] font-medium leading-5 text-[#343B45] lg:flex">
             {navigation.map((item) =>
               item.children ? (
@@ -62,21 +115,19 @@ export function SiteHeader() {
                     {item.label} <ChevronDown className="h-3.5 w-3.5" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start" className="min-w-56">
-                    <DropdownMenuItem asChild>
-                      <Link href={item.href}>Overview</Link>
-                    </DropdownMenuItem>
                     {item.children.map((child) => (
                       <DropdownMenuItem key={child.label} asChild>
-                        <Link href={child.href}>{child.label}</Link>
+                        <SmartLink href={child.href}>{child.label}</SmartLink>
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
-                <Link key={item.label} href={item.href}>{item.label}</Link>
+                <SmartLink key={item.label} href={item.href}>{item.label}</SmartLink>
               )
             )}
           </nav>
+
           <div className="flex items-center justify-end">
             <Button asChild className="hidden h-7 rounded-sm bg-[#F28A35] px-2 text-sm font-semibold text-white shadow-sm hover:bg-[#D97724] sm:inline-flex">
               <Link href="/#contact">Request a Callback</Link>
@@ -106,15 +157,15 @@ function MobileMenu() {
         <div className="mt-5 grid gap-1">
           {navigation.map((item) => (
             <div key={item.label}>
-              <Link href={item.href} className="block rounded-md px-3 py-2.5 text-sm font-semibold text-[#343B45] hover:bg-[#FFF7EF]">
+              <SmartLink href={item.href} className="block rounded-md px-3 py-2.5 text-sm font-semibold text-[#343B45] hover:bg-[#FFF7EF]">
                 {item.label}
-              </Link>
+              </SmartLink>
               {item.children && (
                 <div className="ml-4 border-l border-[#EDE6DD] pl-2">
                   {item.children.map((child) => (
-                    <Link key={child.label} href={child.href} className="block rounded-md px-3 py-2 text-sm text-[#5C6570] hover:bg-[#FFF7EF] hover:text-[#C77B21]">
+                    <SmartLink key={child.label} href={child.href} className="block rounded-md px-3 py-2 text-sm text-[#5C6570] hover:bg-[#FFF7EF] hover:text-[#C77B21]">
                       {child.label}
-                    </Link>
+                    </SmartLink>
                   ))}
                 </div>
               )}
