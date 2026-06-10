@@ -18,10 +18,10 @@ export function ResourceCard({ tag, title, image, href = "#resources" }: Resourc
         <span className="absolute left-4 top-4 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-md text-[#D1842F] uppercase tracking-wider">{tag}</span>
       </Link>
       <div className="flex flex-col p-6 h-full">
-        <h3 className="font-serif text-lg font-md leading-tight text-[#17202A] group-hover:text-[#D1842F] transition-colors">{title}</h3>
-        <Link href={href} className="mt-6 inline-flex items-center gap-2 text-sm font-md text-[#C77B21]">
+        <h4 className="font-serif text-lg font-md leading-tight text-[#17202A] group-hover:text-[#D1842F] transition-colors">{title}</h4>
+        {/* <Link href={href} className="mt-6 inline-flex items-center gap-2 text-sm font-md text-[#C77B21]">
           Read Article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </Link>
+        </Link> */}
       </div>
     </article>
   );

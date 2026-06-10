@@ -24,7 +24,7 @@ export default function ResourcesPage() {
               Resources & Guides
             </span>
 
-            <h1 className="mt-5 max-w-4xl font-serif text-4xl font-md leading-[1.05] tracking-tight text-[#17202A] sm:text-5xl md:text-6xl">
+            <h1 className="mt-1 max-w-4xl font-serif text-2xl font-md leading-[1] tracking-tight text-[#17202A] sm:text-3xl md:text-5xl">
               Clear guidance for families, wherever they are.
             </h1>
 
@@ -34,7 +34,7 @@ export default function ResourcesPage() {
               clarity and calm.
             </p>
 
-            <div className="mt-6 grid max-w-3xl gap-3 sm:grid-cols-3">
+            <div className="mt-1 grid max-w-3xl gap-3 sm:grid-cols-3">
               {[
                 { icon: FileText, label: "Process Guides" },
                 { icon: Globe2, label: "Global Support" },
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
                 Knowledge Library
               </span>
 
-              <h2 className="mt-2 font-serif text-3xl font-md text-[#17202A] md:text-4xl">
+              <h2 className="mt-1 font-serif text-3xl font-md text-[#17202A] md:text-4xl">
                 Helpful resources
               </h2>
 
@@ -118,18 +118,15 @@ export default function ResourcesPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-[30px] border border-[#E8DED2] bg-white p-5 shadow-[0_16px_50px_rgba(23,32,42,0.05)] md:p-7">
+          <div className="mt-2 rounded-[30px] border border-[#E8DED2] bg-white p-5 shadow-[0_16px_50px_rgba(23,32,42,0.05)] md:p-7">
             <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
               <div>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FAF1E6] text-[#C77B21]">
-                  <Headphones className="h-5 w-5" />
-                </div>
 
                 <h3 className="font-serif text-2xl font-md text-[#17202A]">
                   Need personal guidance?
                 </h3>
 
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#5C6570]">
+                <p className="mt-1 max-w-2xl text-sm leading-6 text-[#5C6570]">
                   Our care team can help your family understand documents,
                   timelines, rituals, travel and service coordination.
                 </p>
