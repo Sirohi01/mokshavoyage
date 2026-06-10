@@ -18,6 +18,7 @@ import {
 
 const navigation = [
   { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
   { label: "Services", href: "/services", children: [
     { label: "Funeral Services", href: "/services/funeral-services" },
     { label: "Memorial Services", href: "/services/memorial-services" },
@@ -39,7 +40,6 @@ const navigation = [
     { label: "FAQs", href: "/faq" },
     { label: "Blog", href: "/blog" }
   ] },
-  { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" }
 ];
 
