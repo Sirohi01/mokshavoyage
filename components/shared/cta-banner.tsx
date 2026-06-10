@@ -12,7 +12,7 @@ export function CtaBanner() {
         <p className="mt-2 text-sm text-[#4E5661]">We are here 24/7 to support you in your difficult time.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <Link href="tel:+919568259784" className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#C77B21] px-4 text-sm font-md text-white shadow-sm">
-            <Phone className="h-4 w-4" /> +91 9568259784
+            <Phone className="h-4 w-4" /> +91-9654900525
           </Link>
           <Link href="https://wa.me/919568259784" className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-white px-4 text-sm font-md text-[#1F2933] shadow-sm">
             <MessageCircle className="h-4 w-4 text-[#1FA463]" /> WhatsApp Us

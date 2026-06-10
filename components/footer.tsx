@@ -95,7 +95,7 @@ export function SiteFooter() {
                 <Phone className="mt-1 h-5 w-5 shrink-0 text-[#D1842F]" />
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-[#5C6570]">24/7 Helpline</p>
-                  <p className="mt-1 text-base font-md text-[#17202A] tracking-wide">+91 9568259784</p>
+                  <p className="mt-1 text-base font-md text-[#17202A] tracking-wide">+91-9654900525</p>
                 </div>
               </div>
               <div className="h-px bg-[#EDE6DD]" />

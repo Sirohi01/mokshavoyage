@@ -125,7 +125,7 @@ export function HearseVanSection() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1FA463]/10 text-[#1FA463]">
                   <Phone className="h-4 w-4" />
                 </div>
-                +91 9568259784
+                +91-9654900525
               </div>
             </div>
           </div>

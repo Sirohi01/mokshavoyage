@@ -18,14 +18,14 @@ const contactMethods = [
   {
     icon: Phone,
     title: "24/7 Helpline",
-    value: "+91 9568259784",
+    value: "+91-9654900525",
     sub: "Immediate assistance anytime",
     tone: "gold",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp Support",
-    value: "+91 9568259784",
+    value: "+91-9654900525",
     sub: "Quick updates and coordination",
     tone: "green",
   },
@@ -39,7 +39,7 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Global Headquarters",
-    value: "New Delhi, India",
+    value: "Namo Gange Wellness Pvt Ltd, 12/29, Site-II, Sunrise Industrial Area, Mohan Nagar",
     sub: "Serving families across 50+ countries",
     tone: "gold",
   },
