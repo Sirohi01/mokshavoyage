@@ -130,8 +130,8 @@ export function HearseVanSection() {
             </div>
           </div>
 
-          {/* Image — fixed 280px square */}
-          <div className="h-[260px] w-[260px] shrink-0 overflow-hidden rounded-2xl shadow-lg sm:h-[280px] sm:w-[280px]">
+          {/* Image */}
+          <div className="relative h-[260px] w-full max-w-[400px] shrink-0 overflow-hidden rounded-2xl shadow-lg sm:h-[280px] lg:w-[480px] lg:max-w-none">
             <img
               src={slide.image}
               alt={slide.title}
