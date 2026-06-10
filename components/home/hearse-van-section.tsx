@@ -56,7 +56,7 @@ export function HearseVanSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#FAF7F3] px-4 py-6 sm:px-6 border-y border-[#EDE6DD]/60">
+    <section className="relative overflow-hidden bg-[#FAF7F3] px-4 pt-4 pb-2 sm:px-6 border-t border-[#EDE6DD]/60">
       <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#E7C19A] opacity-20 blur-[100px]" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#EF7F6B] opacity-10 blur-[100px]" />
 

@@ -4,7 +4,7 @@ import { MessageCircle, Phone } from "lucide-react";
 
 export function CtaBanner() {
   return (
-    <section id="contact" className="relative overflow-hidden px-4 py-7 text-center sm:px-6">
+    <section id="contact" className="relative overflow-hidden px-4 py-4 text-center sm:px-6">
       <Image src="/images/moksha/assistance-flowers.png" alt="Soft flowers for immediate assistance" fill sizes="100vw" className="object-cover opacity-25" />
       <div className="absolute inset-0 bg-white/68" />
       <div className="relative mx-auto max-w-4xl">

@@ -85,72 +85,72 @@ export default function Home() {
   return (
     <PublicSiteLayout>
       <PageTransition>
-      <HeroCarousel slides={heroSlides} />
+        <HeroCarousel slides={heroSlides} />
 
-      <AnimatedStats />
+        <AnimatedStats />
 
-      <PartnerMarquee />
+        <PartnerMarquee />
 
-      <HowItWorksCarousel />
+        <HowItWorksCarousel />
 
-      <PhilosophySection />
+        <PhilosophySection />
 
-      <ServicesShowcase services={serviceItems} />
+        <ServicesShowcase services={serviceItems} />
 
-      <VideoSection />
+        <VideoSection />
 
-      <InstagramSection />
+        <HearseVanSection />
 
-      <HearseVanSection />
+        <InstagramSection />
 
-      <section className="px-4 py-7 sm:px-6">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader eyebrow="Why families trust us" title="Care You Can Rely On" />
-          <div className="mt-4 grid gap-4 md:grid-cols-5">
-            {trust.map(([title, body, Icon]) => (
-              <div key={title as string} className="flex items-start gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#FFF1E8] text-[#EF7F6B]">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <span>
-                  <span className="block text-sm font-semibold">{title as string}</span>
-                  <span className="mt-1 block text-xs leading-5 text-[#5C6570]">{body as string}</span>
-                </span>
-              </div>
-            ))}
+        <section className="px-4 py-7 sm:px-6">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader eyebrow="Why families trust us" title="Care You Can Rely On" />
+            <div className="mt-4 grid gap-4 md:grid-cols-5">
+              {trust.map(([title, body, Icon]) => (
+                <div key={title as string} className="flex items-start gap-3">
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#FFF1E8] text-[#EF7F6B]">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span>
+                    <span className="block text-sm font-semibold">{title as string}</span>
+                    <span className="mt-1 block text-xs leading-5 text-[#5C6570]">{body as string}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <GlobalReach />
+        <GlobalReach />
 
-      <TestimonialsMarquee />
+        <TestimonialsMarquee />
 
-      <CtaBanner />
+        <CtaBanner />
 
-      <HomeFaq />
+        <HomeFaq />
 
-      <section id="resources" className="px-4 py-7 sm:px-6">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader
-            eyebrow="Resources & guides"
-            title="Helpful Information for You"
-            action={
-              <Link href="/resources" className="hidden items-center gap-2 rounded-md border border-[#D1842F]/45 px-4 py-2 text-sm font-semibold text-[#B66D1F] sm:inline-flex">
-                View All Resources <ArrowRight className="h-4 w-4" />
-              </Link>
-            }
-          />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
-            {resourcesData.map((resource) => (
-              <ResourceCard key={resource.title} tag={resource.tag} title={resource.title} image={resource.image} href={`/resources/${resource.slug}`} />
-            ))}
-          </div>
-          {/* <div className="mt-5 grid gap-3 rounded-lg border border-[#EDE6DD] bg-white px-5 py-3 text-center text-sm font-bold text-[#7A2E2E] shadow-soft sm:grid-cols-3 lg:grid-cols-6">
+        <section id="resources" className="px-4 pt-1 pb-7 sm:px-6 md:pt-2">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="Resources & guides"
+              title="Helpful Information for You"
+              action={
+                <Link href="/resources" className="hidden items-center gap-2 rounded-md border border-[#D1842F]/45 px-4 py-2 text-sm font-semibold text-[#B66D1F] sm:inline-flex">
+                  View All Resources <ArrowRight className="h-4 w-4" />
+                </Link>
+              }
+            />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
+              {resourcesData.map((resource) => (
+                <ResourceCard key={resource.title} tag={resource.tag} title={resource.title} image={resource.image} href={`/resources/${resource.slug}`} />
+              ))}
+            </div>
+            {/* <div className="mt-5 grid gap-3 rounded-lg border border-[#EDE6DD] bg-white px-5 py-3 text-center text-sm font-bold text-[#7A2E2E] shadow-soft sm:grid-cols-3 lg:grid-cols-6">
             {airlinePartners.map((partner) => <span key={partner}>{partner}</span>)}
           </div> */}
-        </div>
-      </section>
+          </div>
+        </section>
       </PageTransition>
     </PublicSiteLayout>
   );

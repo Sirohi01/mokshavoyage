@@ -61,7 +61,7 @@ export function InstagramSection() {
   const marqueeItems = [...posts, ...posts];
 
   return (
-    <section className="overflow-hidden bg-[#FAF7F3] py-10 border-y border-[#EDE6DD]/60">
+    <section className="overflow-hidden bg-[#FAF7F3] pt-1 pb-5 border-b border-[#EDE6DD]/60">
       {/* Header */}
       <div className="mx-auto mb-7 max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between">
@@ -103,7 +103,7 @@ export function InstagramSection() {
           {marqueeItems.map(({ url }, i) => (
             <div
               key={i}
-              className="h-[540px] w-[340px] shrink-0 overflow-hidden rounded-xl border border-[#EDE6DD] bg-white shadow-sm"
+              className="h-[460px] w-[340px] shrink-0 overflow-hidden rounded-xl border border-[#EDE6DD] bg-white shadow-sm"
               style={{ contain: "layout" }}
             >
               <blockquote
