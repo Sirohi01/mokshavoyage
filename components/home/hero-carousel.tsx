@@ -52,7 +52,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 
       <div className="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-4 py-8 sm:px-6">
         <div className="max-w-2xl translate-y-8 [text-shadow:_0_1px_18px_rgba(255,255,255,0.72)]">
-          <h1 className="font-serif text-4xl font-semibold leading-tight text-[#17202A] sm:text-5xl">
+          <h1 className="font-serif text-4xl font-md leading-tight text-[#17202A] sm:text-5xl">
             {activeSlide.title} <span className="block text-[#C77B21]">{activeSlide.highlight}</span>
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-7 text-[#17202A] sm:text-base">
@@ -65,18 +65,18 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
                   <Icon className="h-4 w-4" />
                 </span>
                 <span>
-                  <span className="block text-sm font-semibold">{title}</span>
+                  <span className="block text-sm font-md">{title}</span>
                   <span className="text-xs text-[#3D4652]">{subtitle}</span>
                 </span>
               </div>
             ))}
           </div>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <Link href="#contact" className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#C77B21] px-5 text-sm font-semibold text-white shadow-sm">
+            <Link href="#contact" className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#C77B21] px-5 text-sm font-md text-white shadow-sm">
               <Phone className="h-4 w-4" />
               Get Immediate Help
             </Link>
-            <Link href="#services" className="inline-flex h-11 items-center justify-center rounded-md border border-[#C77B21]/45 bg-white/80 px-5 text-sm font-semibold text-[#342A20] shadow-sm backdrop-blur-sm">
+            <Link href="#services" className="inline-flex h-11 items-center justify-center rounded-md border border-[#C77B21]/45 bg-white/80 px-5 text-sm font-md text-[#342A20] shadow-sm backdrop-blur-sm">
               Explore Services
             </Link>
           </div>

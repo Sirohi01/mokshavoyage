@@ -255,8 +255,8 @@ export function ServicesClient() {
         <div className="mx-auto max-w-7xl rounded-[20px] border border-[#E8DED2] bg-[#FFF8EF] px-5 py-4 shadow-sm">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-[10.5px] font-semibold uppercase tracking-[0.22em] text-[#C77B21]">Need help choosing?</p>
-              <h2 className="mt-0.5 font-serif text-[1.2rem] font-semibold text-[#17202A] sm:text-[1.4rem]">
+              <p className="text-[10.5px] font-md uppercase tracking-[0.22em] text-[#C77B21]">Need help choosing?</p>
+              <h2 className="mt-0.5 font-serif text-[1.2rem] font-md text-[#17202A] sm:text-[1.4rem]">
                 Not sure which service you need?
               </h2>
               <p className="mt-0.5 text-[12.5px] text-[#5C6570] max-w-md">
@@ -264,10 +264,10 @@ export function ServicesClient() {
               </p>
             </div>
             <div className="flex flex-wrap gap-2 shrink-0">
-              <Link href="tel:+919568259784" className="inline-flex items-center gap-1.5 rounded-full bg-[#C77B21] px-4 py-2 text-[12.5px] font-semibold text-white no-underline transition hover:bg-[#A96418]">
+              <Link href="tel:+919568259784" className="inline-flex items-center gap-1.5 rounded-full bg-[#C77B21] px-4 py-2 text-[12.5px] font-md text-white no-underline transition hover:bg-[#A96418]">
                 <Headphones className="h-3.5 w-3.5" /> Talk to Us
               </Link>
-              <Link href="/contact" className="inline-flex items-center gap-1.5 rounded-full border border-[#CBBBA9] bg-white px-4 py-2 text-[12.5px] font-semibold text-[#17202A] no-underline transition hover:bg-[#FAF8F4]">
+              <Link href="/contact" className="inline-flex items-center gap-1.5 rounded-full border border-[#CBBBA9] bg-white px-4 py-2 text-[12.5px] font-md text-[#17202A] no-underline transition hover:bg-[#FAF8F4]">
                 Send a Message <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>

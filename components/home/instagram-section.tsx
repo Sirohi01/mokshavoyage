@@ -67,7 +67,7 @@ export function InstagramSection() {
         <div className="flex items-center justify-between">
           <div>
             <p className="eyebrow">Instagram</p>
-            <h2 className="mt-1 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+            <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
               Follow Us on Instagram
             </h2>
           </div>
@@ -75,7 +75,7 @@ export function InstagramSection() {
             href="https://www.instagram.com/mokshavoyage.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto flex shrink-0 items-center gap-2 rounded-full border border-[#EDE6DD] bg-white px-4 py-2 text-sm font-semibold text-[#17202A] shadow-sm transition-all hover:border-[#D1842F]/40 hover:text-[#D1842F] hover:shadow-md"
+            className="ml-auto flex shrink-0 items-center gap-2 rounded-full border border-[#EDE6DD] bg-white px-4 py-2 text-sm font-md text-[#17202A] shadow-sm transition-all hover:border-[#D1842F]/40 hover:text-[#D1842F] hover:shadow-md"
           >
             <Instagram className="h-4 w-4" />
             @mokshavoyage.in

@@ -145,7 +145,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center justify-end">
-            <Button asChild className="hidden h-7 rounded-sm bg-[#F28A35] px-2 text-sm font-semibold text-white shadow-sm hover:bg-[#D97724] sm:inline-flex">
+            <Button asChild className="hidden h-7 rounded-sm bg-[#F28A35] px-2 text-sm font-md text-white shadow-sm hover:bg-[#D97724] sm:inline-flex">
               <Link href="/#contact">Request a Callback</Link>
             </Button>
             <MobileMenu />
@@ -173,7 +173,7 @@ function MobileMenu() {
         <div className="mt-5 grid gap-1">
           {navigation.map((item) => (
             <div key={item.label}>
-              <SmartLink href={item.href} className="block rounded-md px-3 py-2.5 text-sm font-semibold text-[#343B45] hover:bg-[#FFF7EF]">
+              <SmartLink href={item.href} className="block rounded-md px-3 py-2.5 text-sm font-md text-[#343B45] hover:bg-[#FFF7EF]">
                 {item.label}
               </SmartLink>
               {item.children && (

@@ -80,7 +80,7 @@ export function HowItWorksCarousel() {
     <section id="process" className="px-4 pb-5 pt-4 sm:px-6">
       <div className="mx-auto max-w-7xl">
         <p className="eyebrow">How it works</p>
-        <h2 className="mt-1 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+        <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
           Simple Steps. Complete Support.
         </h2>
 
@@ -90,12 +90,12 @@ export function HowItWorksCarousel() {
               <span className="grid h-12 w-12 place-items-center rounded-full border border-[#F0D9C1] bg-[#FFF9F3] text-[#D1842F]">
                 <Icon className="h-6 w-6" />
               </span>
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-[#C77B21] text-xs font-bold text-white">
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-[#C77B21] text-xs font-md text-white">
                 {activeStep.number}
               </span>
             </div>
 
-            <h3 className="mt-4 font-serif text-3xl font-semibold text-[#17202A]">{activeStep.title}</h3>
+            <h3 className="mt-4 font-serif text-3xl font-md text-[#17202A]">{activeStep.title}</h3>
             <p className="mt-2 max-w-xl text-base leading-7 text-[#4E5661]">{activeStep.shortText}</p>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-[#4E5661]">{activeStep.details}</p>
 
@@ -103,13 +103,13 @@ export function HowItWorksCarousel() {
               {activeStep.checklist.map((item) => (
                 <div key={item} className="rounded-lg border border-[#EDE6DD] bg-[#FCFBF8] px-3 py-2.5">
                   <CheckCircle2 className="mb-1.5 h-4 w-4 text-[#C77B21]" />
-                  <p className="text-xs font-semibold leading-5 text-[#343B45]">{item}</p>
+                  <p className="text-xs font-md leading-5 text-[#343B45]">{item}</p>
                 </div>
               ))}
             </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-3 rounded-lg bg-[#FFF7EF] px-4 py-3 text-sm text-[#4E5661]">
-              <span className="font-semibold text-[#C77B21]">Care desk:</span>
+              <span className="font-md text-[#C77B21]">Care desk:</span>
               <span>Coordinator-led support with clear next steps before any handover.</span>
             </div>
 
@@ -130,9 +130,9 @@ export function HowItWorksCarousel() {
                   >
                     <div className="flex items-center gap-2">
                       <StepIcon className={cn("h-4 w-4", isActive ? "text-[#C77B21]" : "text-[#D1842F]")} />
-                      <span className="text-xs font-bold text-[#C77B21]">{step.number}</span>
+                      <span className="text-xs font-md text-[#C77B21]">{step.number}</span>
                     </div>
-                    <p className="mt-1 text-xs font-semibold leading-4 text-[#17202A]">{step.title}</p>
+                    <p className="mt-1 text-xs font-md leading-4 text-[#17202A]">{step.title}</p>
                   </button>
                 );
               })}

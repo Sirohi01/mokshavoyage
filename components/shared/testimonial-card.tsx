@@ -16,7 +16,7 @@ export function TestimonialCard({ name, location, text }: TestimonialCardProps) 
       </div>
       <Quote className="mt-3 h-4 w-4 text-[#E7C19A]" />
       <p className="mt-2 text-sm leading-6 text-[#4E5661]">{text}</p>
-      <p className="mt-4 text-sm font-semibold">- {name}</p>
+      <p className="mt-4 text-sm font-md">- {name}</p>
       <p className="text-xs text-[#5C6570]">{location}</p>
     </article>
   );

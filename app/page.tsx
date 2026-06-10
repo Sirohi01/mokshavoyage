@@ -113,7 +113,7 @@ export default function Home() {
                     <Icon className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold">{title as string}</span>
+                    <span className="block text-sm font-md">{title as string}</span>
                     <span className="mt-1 block text-xs leading-5 text-[#5C6570]">{body as string}</span>
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export default function Home() {
               eyebrow="Resources & guides"
               title="Helpful Information for You"
               action={
-                <Link href="/resources" className="hidden items-center gap-2 rounded-md border border-[#D1842F]/45 px-4 py-2 text-sm font-semibold text-[#B66D1F] sm:inline-flex">
+                <Link href="/resources" className="hidden items-center gap-2 rounded-md border border-[#D1842F]/45 px-4 py-2 text-sm font-md text-[#B66D1F] sm:inline-flex">
                   View All Resources <ArrowRight className="h-4 w-4" />
                 </Link>
               }
@@ -146,7 +146,7 @@ export default function Home() {
                 <ResourceCard key={resource.title} tag={resource.tag} title={resource.title} image={resource.image} href={`/resources/${resource.slug}`} />
               ))}
             </div>
-            {/* <div className="mt-5 grid gap-3 rounded-lg border border-[#EDE6DD] bg-white px-5 py-3 text-center text-sm font-bold text-[#7A2E2E] shadow-soft sm:grid-cols-3 lg:grid-cols-6">
+            {/* <div className="mt-5 grid gap-3 rounded-lg border border-[#EDE6DD] bg-white px-5 py-3 text-center text-sm font-md text-[#7A2E2E] shadow-soft sm:grid-cols-3 lg:grid-cols-6">
             {airlinePartners.map((partner) => <span key={partner}>{partner}</span>)}
           </div> */}
           </div>

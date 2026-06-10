@@ -316,7 +316,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="mt-4 space-y-3">
                 {service.content.process.map((step, idx) => (
                   <div key={idx} className="grid gap-3 rounded-xl border border-[#E8DED2] bg-[#FAF8F4] p-3.5 transition hover:bg-white sm:grid-cols-[44px_1fr]">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-sm font-bold text-[#C77B21] shadow-sm ring-1 ring-[#E8DED2]">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-sm font-md text-[#C77B21] shadow-sm ring-1 ring-[#E8DED2]">
                       {step.step}
                     </div>
                     <div>

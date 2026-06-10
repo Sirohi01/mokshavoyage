@@ -65,7 +65,7 @@ export function HearseVanSection() {
         {/* Section Header */}
         <div className="mb-6 text-center">
           <p className="eyebrow">Transport Services</p>
-          <h2 className="mt-1.5 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+          <h2 className="mt-1.5 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
             Premium Hearse Van Services
           </h2>
         </div>
@@ -78,7 +78,7 @@ export function HearseVanSection() {
               type="button"
               onClick={() => setActive(i)}
               className={[
-                "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
+                "rounded-full px-4 py-2 text-sm font-md transition-all duration-200",
                 active === i
                   ? "bg-[#D1842F] text-white shadow-md"
                   : "border border-[#EDE6DD] bg-white text-[#5C6570] hover:border-[#D1842F]/40 hover:text-[#D1842F]",
@@ -95,7 +95,7 @@ export function HearseVanSection() {
           {/* Content */}
           <div className="flex-1">
             <p className="eyebrow">{slide.eyebrow}</p>
-            <h3 className="mt-2 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+            <h3 className="mt-2 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
               {slide.title}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-[#4E5661]">
@@ -116,12 +116,12 @@ export function HearseVanSection() {
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
                 href="tel:+919568259784"
-                className="inline-flex h-11 items-center gap-2 rounded-full bg-gradient-to-r from-[#D1842F] to-[#B06B22] px-5 text-sm font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex h-11 items-center gap-2 rounded-full bg-gradient-to-r from-[#D1842F] to-[#B06B22] px-5 text-sm font-md text-white shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <Truck className="h-4 w-4" />
                 Book a Hearse Van
               </Link>
-              <div className="flex items-center gap-2 text-sm font-semibold text-[#17202A]">
+              <div className="flex items-center gap-2 text-sm font-md text-[#17202A]">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1FA463]/10 text-[#1FA463]">
                   <Phone className="h-4 w-4" />
                 </div>

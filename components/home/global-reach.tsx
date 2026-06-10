@@ -112,7 +112,7 @@ export function GlobalReach() {
       <div className="relative mx-auto max-w-6xl">
         {/* ── Header ── */}
         <div className="mb-5 text-center">
-          <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[#F0D9C1] bg-[#FFF1E8] px-3 py-1 text-[11px] font-semibold tracking-widest text-[#D1842F] uppercase">
+          <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[#F0D9C1] bg-[#FFF1E8] px-3 py-1 text-[11px] font-md tracking-widest text-[#D1842F] uppercase">
             <Globe2 className="h-3 w-3" /> Global Footprint
           </span>
           <h2 className="font-serif text-3xl font-medium text-[#17202A] sm:text-4xl leading-tight">
@@ -136,7 +136,7 @@ export function GlobalReach() {
             <button
               key={r.region}
               onClick={() => goTo(i)}
-              className="flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12px] font-semibold transition-all duration-300"
+              className="flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12px] font-md transition-all duration-300"
               style={{
                 borderColor: i === active ? r.accent : "#EDE6DD",
                 backgroundColor:
@@ -221,7 +221,7 @@ export function GlobalReach() {
                   className="h-5 w-5 shrink-0"
                   style={{ color: area.accent }}
                 />
-                <h3 className="font-serif text-2xl font-semibold text-[#17202A]">
+                <h3 className="font-serif text-2xl font-md text-[#17202A]">
                   {area.region}
                 </h3>
               </div>
@@ -236,7 +236,7 @@ export function GlobalReach() {
 
               {/* Countries */}
               <p
-                className="text-[12px] font-bold tracking-widest uppercase mb-1"
+                className="text-[12px] font-md tracking-widest uppercase mb-1"
                 style={{ color: area.accent }}
               >
                 Countries Covered
@@ -246,7 +246,7 @@ export function GlobalReach() {
               </p>
 
               {/* Hubs */}
-              <p className="text-[12px] font-bold tracking-widest uppercase text-[#7A8590] mb-2">
+              <p className="text-[12px] font-md tracking-widest uppercase text-[#7A8590] mb-2">
                 Major Hubs
               </p>
               <div className="flex flex-wrap gap-1.5">

@@ -44,7 +44,7 @@ export function HomeFaq() {
         {/* Header on Top */}
         <div className="text-center mb-2 max-w-3xl mx-auto">
           <p className="eyebrow">Quick Answers</p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#17202A] sm:text-4xl">
+          <h2 className="mt-2 font-serif text-3xl font-md leading-tight text-[#17202A] sm:text-4xl">
             Questions Families Often Ask
           </h2>
           <p className="mt-4 text-lg text-[#5C6570]">
@@ -98,7 +98,7 @@ export function HomeFaq() {
                   value={`item-${index}`}
                   className="rounded-2xl border border-[#EDE6DD] bg-white px-6 shadow-sm transition-all data-[state=open]:border-[#C77B21] data-[state=open]:shadow-md hover:border-[#D1842F]/50"
                 >
-                  <AccordionTrigger className="text-left font-serif text-[17px] font-semibold text-[#17202A] hover:no-underline hover:text-[#C77B21] py-5">
+                  <AccordionTrigger className="text-left font-serif text-[17px] font-md text-[#17202A] hover:no-underline hover:text-[#C77B21] py-5">
                     <div className="flex items-center gap-3">
                       <HelpCircle className="h-5 w-5 shrink-0 text-[#E7C19A]" />
                       <span>{faq.question}</span>
@@ -114,7 +114,7 @@ export function HomeFaq() {
             <div className="mt-8">
               <Link
                 href="/faq"
-                className="inline-flex items-center gap-2 rounded-full bg-white border border-[#EDE6DD] px-6 py-3 text-sm font-semibold text-[#17202A] shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-[#D1842F]"
+                className="inline-flex items-center gap-2 rounded-full bg-white border border-[#EDE6DD] px-6 py-3 text-sm font-md text-[#17202A] shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-[#D1842F]"
               >
                 Read All FAQs <ArrowRight className="h-4 w-4 text-[#D1842F]" />
               </Link>

@@ -18,7 +18,7 @@ export function TestimonialsMarquee() {
     <section className="overflow-hidden border-y border-[#EDE6DD] bg-[#FAF7F3] px-4 pt-1 pb-4 sm:px-6 md:pt-4">
       <div className="mx-auto max-w-7xl text-center">
         <p className="eyebrow">Families speak</p>
-        <h2 className="mt-1 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+        <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
           Stories of Trust & Gratitude
         </h2>
       </div>
@@ -53,7 +53,7 @@ export function TestimonialsMarquee() {
                     <img src={image} alt={name} className="h-full w-full object-cover" />
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="text-[13px] font-semibold text-[#17202A] leading-tight">{name}</h4>
+                    <h4 className="text-[13px] font-md text-[#17202A] leading-tight">{name}</h4>
                     <p className="text-[11px] text-[#8A94A6] mt-0.5">{location}</p>
                   </div>
                 </div>

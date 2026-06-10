@@ -88,7 +88,7 @@ function AnimatedStatCard({ stat }: { stat: AnimatedStat }) {
         <Icon className="h-4 w-4" />
       </span>
       <span>
-        <span className="block text-xl font-bold tracking-tight text-[#17202A]">
+        <span className="block text-xl font-md tracking-tight text-[#17202A]">
           {formattedCount}{stat.suffix}
         </span>
         <span className="block text-sm text-[#4E5661]">{stat.label}</span>

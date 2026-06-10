@@ -1,7 +1,15 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  BookOpenText,
+  Calendar,
+  Clock3,
+  Headphones,
+  ShieldCheck,
+} from "lucide-react";
 import { resourcesData } from "@/lib/data";
 import { PublicSiteLayout } from "@/components/public-site-layout";
 
@@ -21,88 +29,176 @@ export default async function ResourceArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const resource = resourcesData.find((r) => r.slug === slug);
 
-  if (!resource) {
-    notFound();
-  }
+  if (!resource) notFound();
 
-  // A very simple Markdown rendering approach using dangerouslySetInnerHTML,
-  // but since we control the text, we can do a simple paragraph split or use a generic markdown renderer.
-  // We'll use a simple parser for the basic markdown we added (## and ###).
-  
   const renderContent = (content: string) => {
-    return content.split('\n\n').map((block, idx) => {
-      if (block.startsWith('### ')) {
-        return <h3 key={idx} className="font-serif text-2xl font-semibold text-[#17202A] mt-8 mb-4">{block.replace('### ', '')}</h3>;
-      }
-      if (block.startsWith('- **')) {
-        const listItems = block.split('\n').map(item => item.replace('- ', ''));
+    return content.split("\n\n").map((block, idx) => {
+      if (block.startsWith("### ")) {
         return (
-          <ul key={idx} className="list-disc pl-5 mt-4 space-y-2 text-[#5C6570]">
+          <h3
+            key={idx}
+            className="mb-3 mt-8 font-serif text-2xl font-md leading-tight text-[#17202A]"
+          >
+            {block.replace("### ", "")}
+          </h3>
+        );
+      }
+
+      if (block.startsWith("- **")) {
+        const listItems = block.split("\n").map((item) => item.replace("- ", ""));
+
+        return (
+          <ul key={idx} className="mt-5 space-y-3">
             {listItems.map((item, i) => (
-              <li key={i} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+              <li
+                key={i}
+                className="rounded-2xl border border-[#E8DED2] bg-[#FAF8F4] px-4 py-3 text-sm leading-6 text-[#5C6570]"
+                dangerouslySetInnerHTML={{
+                  __html: item.replace(
+                    /\*\*(.*?)\*\*/g,
+                    '<strong class="font-md text-[#17202A]">$1</strong>'
+                  ),
+                }}
+              />
             ))}
           </ul>
         );
       }
-      return <p key={idx} className="mt-4 text-lg leading-8 text-[#5C6570]">{block}</p>;
+
+      return (
+        <p key={idx} className="mt-4 text-base leading-8 text-[#5C6570]">
+          {block}
+        </p>
+      );
     });
   };
 
   return (
     <PublicSiteLayout>
-      <article className="bg-[#FCFBF8]">
-        {/* Article Header */}
-        <header className="mx-auto max-w-3xl px-4 pb-8 pt-16 sm:px-6">
-          <Link href="/resources" className="inline-flex items-center gap-2 text-sm font-semibold text-[#C77B21] hover:underline mb-8">
-            <ArrowLeft className="h-4 w-4" /> Back to Resources
-          </Link>
-          
-          <div className="flex items-center gap-3 mb-6">
-            <span className="rounded bg-[#FFF1E8] px-2.5 py-1 text-xs font-semibold text-[#EF7F6B] uppercase tracking-wider">
-              {resource.tag}
-            </span>
-            <span className="flex items-center gap-1.5 text-sm text-[#5C6570]">
-              <Calendar className="h-4 w-4" /> Today
-            </span>
-          </div>
-          
-          <h1 className="font-serif text-5xl font-semibold leading-[1.15] text-[#17202A] sm:text-6xl lg:text-[72px]">
-            {resource.title}
-          </h1>
-        </header>
+      <article className="bg-[#FAF8F4]">
+        <section className="relative overflow-hidden px-4 py-8 sm:px-6 md:py-12">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(199,123,33,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(23,32,42,0.05),transparent_30%)]" />
 
-        {/* Featured Image */}
-        <div className="mx-auto max-w-[1000px] px-4 sm:px-6 relative">
-          <div className="absolute -left-12 -top-12 -z-10 h-64 w-64 rounded-full bg-[#FFF1E8]/50 blur-3xl" />
-          <div className="absolute -right-12 -bottom-12 -z-10 h-64 w-64 rounded-full bg-[#E5F5ED]/50 blur-3xl" />
-          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2rem] shadow-2xl border border-white">
-            <Image
-              src={resource.image}
-              alt={resource.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
+          <div className="relative mx-auto max-w-7xl">
+            
 
-        {/* Article Content */}
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-          <div className="prose prose-xl prose-[#5C6570] max-w-none prose-headings:font-serif prose-headings:text-[#17202A] prose-a:text-[#C77B21] hover:prose-a:text-[#B66D1F] prose-li:marker:text-[#D1842F]">
-            {renderContent(resource.content)}
-          </div>
-          
-          <div className="mt-20 border-t border-[#EDE6DD] pt-12">
-            <div className="relative overflow-hidden rounded-3xl bg-[#17202A] p-10 text-center shadow-2xl">
-              <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#D1842F]/20 blur-3xl" />
-              <h3 className="relative font-serif text-3xl font-semibold text-white">Need Personalized Guidance?</h3>
-              <p className="relative mt-4 text-lg text-[#EADCCA] max-w-xl mx-auto">Our care managers are available 24/7 to help you navigate through your specific situation.</p>
-              <Link href="/contact" className="relative mt-8 inline-flex h-14 items-center justify-center rounded-full bg-[#D1842F] px-10 text-lg font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#B66D1F] hover:shadow-xl">
-                Talk to an Expert
-              </Link>
+            <div className="mt-1 grid gap-8 lg:grid-cols-[1fr_460px] lg:items-end">
+              <div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DED2] bg-white px-4 py-1.5 text-xs font-md uppercase tracking-[0.16em] text-[#C77B21] shadow-sm">
+                    <BookOpenText className="h-4 w-4" />
+                    {resource.tag}
+                  </span>
+
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DED2] bg-white px-4 py-1.5 text-xs font-medium text-[#5C6570]">
+                    <Calendar className="h-4 w-4 text-[#C77B21]" />
+                    Updated recently
+                  </span>
+
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DED2] bg-white px-4 py-1.5 text-xs font-medium text-[#5C6570]">
+                    <Clock3 className="h-4 w-4 text-[#C77B21]" />
+                    4 min read
+                  </span>
+                </div>
+
+                <h1 className="mt-1 max-w-4xl font-serif text-4xl font-md leading-[1.06] tracking-tight text-[#17202A] sm:text-5xl md:text-6xl">
+                  {resource.title}
+                </h1>
+
+                <p className="mt-1 max-w-2xl text-base leading-7 text-[#5C6570]">
+                  A carefully prepared guide to help families understand the
+                  process, documents and next steps with clarity and calm.
+                </p>
+              </div>
+
+              <div className="rounded-[30px] border border-[#E8DED2] bg-white p-2 shadow-[0_18px_60px_rgba(23,32,42,0.07)]">
+                <div className="relative overflow-hidden rounded-[24px]">
+                  <Image
+                    src={resource.image}
+                    alt={resource.title}
+                    width={760}
+                    height={540}
+                    priority
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17202A]/35 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/50 bg-white/90 p-4 backdrop-blur-md">
+                    <p className="text-sm font-md text-[#17202A]">
+                      Guidance prepared for sensitive family decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <section className="px-4 pb-12 sm:px-6 md:pb-16">
+          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[250px_1fr_330px]">
+            <aside className="hidden lg:block">
+              <div className="sticky top-24 rounded-[28px] border border-[#E8DED2] bg-white p-5 shadow-[0_12px_40px_rgba(23,32,42,0.04)]">
+                <span className="text-xs font-md uppercase tracking-[0.16em] text-[#C77B21]">
+                  Article
+                </span>
+
+                <div className="mt-4 space-y-3 text-sm text-[#5C6570]">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-4 w-4 text-[#C77B21]" />
+                    Verified guidance
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock3 className="h-4 w-4 text-[#C77B21]" />
+                    Quick reading
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <BookOpenText className="h-4 w-4 text-[#C77B21]" />
+                    Family support
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <main className="rounded-[30px] border border-[#E8DED2] bg-white p-5 shadow-[0_16px_50px_rgba(23,32,42,0.05)] sm:p-7 md:p-9">
+              <div className="border-b border-[#E8DED2] pb-5">
+                <span className="text-xs font-md uppercase tracking-[0.16em] text-[#C77B21]">
+                  Guide Details
+                </span>
+                <h2 className="mt-2 font-serif text-3xl font-md text-[#17202A]">
+                  What families should know
+                </h2>
+              </div>
+
+              <div className="mt-6">{renderContent(resource.content)}</div>
+            </main>
+
+            <aside className="lg:sticky lg:top-24 lg:self-start">
+              <div className="rounded-[30px] border border-[#E8DED2] bg-white p-5 shadow-[0_16px_50px_rgba(23,32,42,0.06)]">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FAF1E6] text-[#C77B21]">
+                  <Headphones className="h-5 w-5" />
+                </div>
+
+                <h3 className="font-serif text-2xl font-md text-[#17202A]">
+                  Need personal guidance?
+                </h3>
+
+                <p className="mt-2 text-sm leading-6 text-[#5C6570]">
+                  Our care managers can help your family understand the process
+                  and coordinate the next steps.
+                </p>
+
+                <Link
+                  href="/contact"
+                  className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-2xl bg-[#C77B21] px-5 text-sm font-md text-white transition hover:bg-[#9B5F18]"
+                >
+                  Talk to Care Team
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </aside>
+          </div>
+        </section>
       </article>
     </PublicSiteLayout>
   );

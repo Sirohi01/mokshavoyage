@@ -41,7 +41,7 @@ export function ServicesShowcase({ services }: ServicesShowcaseProps) {
             </p>
           </div>
           <div className="flex justify-start lg:justify-end">
-            <Link href="/services/funeral-services" className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#D1842F] px-5 text-sm font-semibold text-white shadow-gold">
+            <Link href="/services/funeral-services" className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#D1842F] px-5 text-sm font-md text-white shadow-gold">
               View All Services <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -60,7 +60,7 @@ export function ServicesShowcase({ services }: ServicesShowcaseProps) {
                 <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#FFF3E5] text-[#D1842F]">
                   <Icon className="h-7 w-7" />
                 </span>
-                <h3 className="mt-3 text-sm font-bold text-[#17202A]">{service.title}</h3>
+                <h3 className="mt-3 text-sm font-md text-[#17202A]">{service.title}</h3>
                 <div className="mx-auto mt-2 h-px w-12 bg-[#D1842F]/30" />
                 <p className="mx-auto mt-2 max-w-[165px] text-xs leading-5 text-gray-900">{service.description}</p>
               </Link>

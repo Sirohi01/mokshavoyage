@@ -13,7 +13,7 @@ export function StatCard({ value, label, icon: Icon }: StatCardProps) {
         <Icon className="h-5 w-5" />
       </span>
       <span>
-        <span className="block text-xl font-semibold">{value}</span>
+        <span className="block text-xl font-md">{value}</span>
         <span className="text-xs text-[#5C6570]">{label}</span>
       </span>
     </div>

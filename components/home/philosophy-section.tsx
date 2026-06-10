@@ -49,7 +49,7 @@ export function PhilosophySection() {
                 <Image src="/images/moksha/1.png" alt="Founder" width={48} height={48} className="object-cover grayscale" />
               </div>
               <div>
-                <p className="font-bold text-[#17202A]">Vijay Sharma</p>
+                <p className="font-md text-[#17202A]">Vijay Sharma</p>
                 <p className="text-sm text-[#5C6570]">Founder & Care Director</p>
               </div>
             </div>

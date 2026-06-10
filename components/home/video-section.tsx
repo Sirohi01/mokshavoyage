@@ -38,7 +38,7 @@ export function VideoSection() {
         <div className="mb-7 flex items-center justify-between">
           <div>
             <p className="eyebrow">Watch Us Work</p>
-            <h2 className="mt-1 font-serif text-2xl font-semibold text-[#222831] sm:text-3xl">
+            <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
               Stories of Care & Compassion
             </h2>
           </div>
@@ -46,7 +46,7 @@ export function VideoSection() {
             href="https://www.youtube.com/@MokshaVoyage"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto flex shrink-0 items-center gap-2 rounded-full bg-[#FF0000] px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#cc0000] hover:shadow-md"
+            className="ml-auto flex shrink-0 items-center gap-2 rounded-full bg-[#FF0000] px-4 py-2 text-sm font-md text-white shadow-sm transition-all hover:bg-[#cc0000] hover:shadow-md"
           >
             <Youtube className="h-4 w-4" />
             Subscribe
@@ -89,7 +89,7 @@ export function VideoSection() {
 
               {/* Label */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/65 to-transparent p-2.5 pt-5">
-                <p className="text-[11px] font-semibold leading-tight text-white">{video.title}</p>
+                <p className="text-[11px] font-md leading-tight text-white">{video.title}</p>
               </div>
             </div>
           ))}

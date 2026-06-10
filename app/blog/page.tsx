@@ -39,7 +39,7 @@ export default function BlogPage() {
         <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-[#1FA463]/10 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#D1842F]/10 blur-3xl" />
         <div className="relative z-10 mx-auto max-w-3xl">
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-[#D1842F] shadow-sm border border-[#EDE6DD]">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-md text-[#D1842F] shadow-sm border border-[#EDE6DD]">
             Our Journal
           </span>
           <h1 className="font-serif text-4xl font-normal leading-tight text-[#17202A] sm:text-5xl md:text-6xl lg:text-[72px]">
@@ -71,7 +71,7 @@ export default function BlogPage() {
                     <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> {post.date}</span>
                     <span className="flex items-center gap-1.5"><User className="h-3.5 w-3.5" /> {post.author}</span>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-[#17202A] group-hover:text-[#C77B21] transition-colors">
+                  <h3 className="font-serif text-xl font-md text-[#17202A] group-hover:text-[#C77B21] transition-colors">
                     <Link href={`/resources/${post.slug}`}>
                       {post.title}
                     </Link>
@@ -80,7 +80,7 @@ export default function BlogPage() {
                     {post.excerpt}
                   </p>
                   <div className="mt-6">
-                    <Link href={`/resources/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-semibold text-[#C77B21]">
+                    <Link href={`/resources/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-md text-[#C77B21]">
                       Read Article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </div>

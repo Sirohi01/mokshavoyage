@@ -28,7 +28,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       return this.props.fallback ?? (
         <div className="rounded-lg border border-[#EDE6DD] bg-white p-6 text-center">
           <AlertTriangle className="mx-auto h-7 w-7 text-[#EF4444]" />
-          <h2 className="mt-3 text-base font-semibold">Something went wrong</h2>
+          <h2 className="mt-3 text-base font-md">Something went wrong</h2>
           <p className="mt-2 text-sm text-[#5C6570]">Please refresh the page or try again shortly.</p>
         </div>
       );
