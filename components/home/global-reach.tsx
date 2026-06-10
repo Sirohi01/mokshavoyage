@@ -72,21 +72,16 @@ const regions = [
 export function GlobalReach() {
   const [active, setActive] = useState(0);
   const [imgError, setImgError] = useState<Record<number, boolean>>({});
-  const [animating, setAnimating] = useState(false);
 
-  const area = regions[active];
+  const area = regions[active] || regions[0];
 
-  const goTo = useCallback((idx: number) => {
-    if (idx === active || animating) return;
-    setAnimating(true);
-    setTimeout(() => {
-      setActive(idx);
-      setAnimating(false);
-    }, 220);
-  }, [active, animating]);
+  const goTo = (idx: number) => {
+    if (idx === active) return;
+    setActive(idx);
+  };
 
-  const prev = () => goTo((active - 1 + regions.length) % regions.length);
-  const next = () => goTo((active + 1) % regions.length);
+  const prev = () => setActive((p) => (p - 1 + regions.length) % regions.length);
+  const next = () => setActive((p) => (p + 1) % regions.length);
 
   // Auto-advance
   useEffect(() => {
@@ -170,9 +165,8 @@ export function GlobalReach() {
             {/* Map image — left */}
             <div className="relative flex min-h-[280px] w-full items-center justify-center overflow-hidden bg-[#F9F5F0] md:min-h-[360px] md:w-1/2">
               <div
-                className={`relative h-full w-full transition-opacity duration-300 ${
-                  animating ? "opacity-0" : "opacity-100"
-                }`}
+                key={active}
+                className="relative h-full w-full animate-in fade-in zoom-in-95 duration-500"
               >
                 {!imgError[active] ? (
                   <Image
@@ -218,9 +212,8 @@ export function GlobalReach() {
 
             {/* Info panel — right */}
             <div
-              className={`flex w-full flex-col justify-center p-6 md:p-8 md:w-1/2 transition-opacity duration-300 ${
-                animating ? "opacity-0" : "opacity-100"
-              }`}
+              key={active}
+              className="flex w-full flex-col justify-center p-6 md:p-8 md:w-1/2 animate-in fade-in slide-in-from-right-4 duration-500"
             >
               {/* Region title */}
               <div className="flex items-center gap-2 mb-1">
